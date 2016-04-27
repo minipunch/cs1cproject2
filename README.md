@@ -8,6 +8,6 @@ Google doc folder: https://drive.google.com/folderview?id=0B9b1ecsyWOwzMGF1Y09BT
 Group Members
 * Nick Sidaris
 * Dallas Wendt
-* Ashly Hernandez
 * Josh Yolles
 * Dustin Vuong
+* Ashly Hernandez
