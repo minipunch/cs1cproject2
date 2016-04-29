@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "loginwindow.h"
+#include "dbmanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,7 +22,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    LoginWindow    login;
+    dbManager db;
 
 
 };
