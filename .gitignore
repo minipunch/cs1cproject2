@@ -26,7 +26,3 @@
 *.exe
 *.out
 *.app
-
-# qt shizznit
-
-*.user

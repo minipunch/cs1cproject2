@@ -17,34 +17,24 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>40</x>
       <y>10</y>
       <width>771</width>
       <height>551</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="menuTab">
      <attribute name="title">
       <string>Menu</string>
      </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>My Account</string>
-     </attribute>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>210</y>
+        <x>570</x>
+        <y>220</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -53,6 +43,16 @@
        <string>Login</string>
       </property>
      </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Tab 3</string>
+     </attribute>
     </widget>
    </widget>
   </widget>
