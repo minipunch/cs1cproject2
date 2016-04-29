@@ -18,6 +18,7 @@ bool dbManager::addPerson(const QString& name)
    // you should check if args are ok first...
    QSqlQuery query;
    query.prepare("INSERT INTO users (name) VALUES (:name)");
+   //bind what is passed in to the attribute of the object in database
    query.bindValue(":name", name);
    if(query.exec())
    {
@@ -40,8 +41,10 @@ void dbManager::checkLogin(QString username, QString pword)
     query.bindValue(":username", username);
     query.bindValue(":pword", pword);
 
+    //makes sure the the query is executed
     if(query.exec())
     {
+        //grabs something that matches the query
         if(query.next())
         {
             qDebug() << "USERNAME FOUND!!";
