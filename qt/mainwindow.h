@@ -18,11 +18,12 @@ public:
 
 
 private slots:
-    void on_pushButton_clicked();
+    void on_signInButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     dbManager db;
+    int currentAccessLevel;
 };
 
 #endif // MAINWINDOW_H
