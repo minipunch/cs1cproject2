@@ -24,7 +24,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabs">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="welcomeTab">
        <attribute name="title">
@@ -147,28 +147,16 @@
               </layout>
              </item>
             </layout>
-            <zorder>label</zorder>
-            <zorder>label_2</zorder>
-            <zorder>signInButton</zorder>
-            <zorder>lineEdit</zorder>
-            <zorder>lineEdit_2</zorder>
-            <zorder>customerInfoBox_3</zorder>
            </widget>
           </item>
          </layout>
         </item>
        </layout>
-       <zorder>scrollArea</zorder>
-       <zorder>signInButton</zorder>
-       <zorder>lineEdit_2</zorder>
-       <zorder>myAccountLabel</zorder>
-       <zorder>customerLoginBox</zorder>
-       <zorder>splitter</zorder>
        <zorder></zorder>
       </widget>
       <widget class="QWidget" name="myAccount2">
        <attribute name="title">
-        <string>My Account</string>
+        <string>My Account2</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
@@ -199,7 +187,7 @@
            </size>
           </property>
           <property name="title">
-           <string>My Account</string>
+           <string>Account Information</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -207,9 +195,9 @@
           <property name="flat">
            <bool>false</bool>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
              <item>
               <widget class="QLabel" name="label_13">
                <property name="text">
@@ -218,7 +206,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_14">
+              <widget class="QLabel" name="usernameLabel">
                <property name="text">
                 <string>TextLabel</string>
                </property>
@@ -238,9 +226,23 @@
               </widget>
              </item>
              <item>
+              <widget class="QLabel" name="nameLabel">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QLabel" name="label_16">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Company:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="companyLabel">
+               <property name="text">
+                <string>TextLabel</string>
                </property>
               </widget>
              </item>
@@ -252,9 +254,23 @@
               </widget>
              </item>
              <item>
+              <widget class="QLabel" name="streetLabel">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QLabel" name="label_18">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;City:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="cityLabel">
+               <property name="text">
+                <string>TextLabel</string>
                </property>
               </widget>
              </item>
@@ -266,9 +282,23 @@
               </widget>
              </item>
              <item>
+              <widget class="QLabel" name="staeLabel">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <widget class="QLabel" name="label_20">
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Zip Code:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="zipLabel">
+               <property name="text">
+                <string>TextLabel</string>
                </property>
               </widget>
              </item>
@@ -278,17 +308,13 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="signOutButton">
           <property name="text">
            <string>Sign Out</string>
           </property>
          </widget>
         </item>
        </layout>
-       <zorder>label_17</zorder>
-       <zorder>label_21</zorder>
-       <zorder>customerInfoBox_2</zorder>
-       <zorder>pushButton</zorder>
       </widget>
       <widget class="QWidget" name="adminPanel">
        <attribute name="title">

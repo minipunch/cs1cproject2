@@ -20,10 +20,13 @@ public:
 private slots:
     void on_signInButton_clicked();
 
+    void on_signOutButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;
-    int currentAccessLevel;
+    bool isUserLoggedIn;
+    int currentUserAccessLevel;
 };
 
 #endif // MAINWINDOW_H

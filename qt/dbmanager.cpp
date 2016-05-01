@@ -5,35 +5,17 @@ dbManager::dbManager()
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("../cybersecurity.db");
 
-    // never fails to connect. idk why.
     if(!db.open())
         qDebug() << "Not connected to DB.";
     else if(db.open())
         qDebug() << "Connected to DB.";
 }
 
-bool dbManager::addPerson(const QString& name)
-{
-   bool success = false;
-   // you should check if args are ok first...
-   QSqlQuery query;
-   query.prepare("INSERT INTO users (name) VALUES (:name)");
-   //bind what is passed in to the attribute of the object in database
-   query.bindValue(":name", name);
-   if(query.exec())
-   {
-       success = true;
-   }
-   else
-   {
-        qDebug() << "addPerson error:  "
-                 << query.lastError();
-   }
-
-   return success;
-}
-
-
+/* RETURN VALUES:
+ * 0 = GUEST
+ * 1 = CUSTOMER
+ * 2 = ADMIN
+*/
 int dbManager::checkLogin(QString username, QString pword)
 {
     QSqlQuery query;
@@ -44,7 +26,7 @@ int dbManager::checkLogin(QString username, QString pword)
     //makes sure the the query is executed
     if(query.exec())
     {
-        //grabs something that matches the query with access level 1
+        //returns data that matches the query with access level 1
         if(query.next())
         {
             return 1;
@@ -77,6 +59,31 @@ int dbManager::checkLogin(QString username, QString pword)
         }
     }
 
+}
 
+QString dbManager::retrieveCustomerName(QString username)
+{
+    QSqlQuery query("SELECT name FROM users WHERE username = '" + username + "'");
+
+    while(query.next())
+    {
+        QString customerName = query.value(0).toString();
+        return customerName;
+    }
+
+    return "NO.CUSTOMER.INFO.FOUND";
+}
+
+QString dbManager::retrieveCustomerUsername(QString username)
+{
+    QSqlQuery query("SELECT username FROM users WHERE username = '" + username + "'");
+
+    while(query.next())
+    {
+        QString customerUsername = query.value(0).toString();
+        return customerUsername;
+    }
+
+    return "NO.CUSTOMER.INFO.FOUND";
 }
 
