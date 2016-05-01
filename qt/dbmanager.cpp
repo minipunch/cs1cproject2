@@ -34,24 +34,49 @@ bool dbManager::addPerson(const QString& name)
 }
 
 
-void dbManager::checkLogin(QString username, QString pword)
+int dbManager::checkLogin(QString username, QString pword)
 {
     QSqlQuery query;
-    query.prepare("SELECT username FROM users WHERE username = (:username) AND password = (:pword)");
+    query.prepare("SELECT username FROM users WHERE username = (:username) AND password = (:pword) AND access = 1");
     query.bindValue(":username", username);
     query.bindValue(":pword", pword);
 
     //makes sure the the query is executed
     if(query.exec())
     {
-        //grabs something that matches the query
+        //grabs something that matches the query with access level 1
         if(query.next())
         {
-            qDebug() << "USERNAME FOUND!!";
+            return 1;
+            qDebug() << "USERNAME FOUND LEVEL 1!!";
         }
         else
-            qDebug() << "USERNAME NOT FOUND!!";
+        {
+            qDebug() << "USERNAME NOT FOUND LEVEL 1!!";
+        }
     }
+
+    QSqlQuery query2;
+    query2.prepare("SELECT username FROM users WHERE username = (:username) AND password = (:pword) AND access = 2");
+    query2.bindValue(":username", username);
+    query2.bindValue(":pword", pword);
+
+    //makes sure the the query is executed
+    if(query2.exec())
+    {
+        //grabs something that matches the query with access level 2
+        if(query2.next())
+        {
+            return 2;
+            qDebug() << "USERNAME FOUND LEVEL 2!!";
+        }
+        else
+        {
+            return 0;
+            qDebug() << "USERNAME NOT FOUND LEVEL 2!!";
+        }
+    }
+
 
 }
 

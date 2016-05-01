@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="tabs">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -24,27 +24,27 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
-    <widget class="QWidget" name="menuTab">
+    <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
-      <string>Menu</string>
+      <string>Welcome</string>
      </attribute>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="productsTab">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Products</string>
      </attribute>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="myAccount">
      <attribute name="title">
       <string>My Account</string>
      </attribute>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>130</y>
+        <x>360</x>
+        <y>140</y>
         <width>301</width>
         <height>221</height>
        </rect>
@@ -114,15 +114,6 @@
         <enum>QLineEdit::Password</enum>
        </property>
       </widget>
-      <zorder>label</zorder>
-      <zorder>lineEdit</zorder>
-      <zorder>lineEdit_2</zorder>
-      <zorder>label_2</zorder>
-      <zorder>label</zorder>
-      <zorder>label_2</zorder>
-      <zorder>pushButton</zorder>
-      <zorder>lineEdit</zorder>
-      <zorder>lineEdit_2</zorder>
      </widget>
      <widget class="QLabel" name="label_3">
       <property name="geometry">
@@ -138,6 +129,24 @@
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="adminPanel">
+     <attribute name="title">
+      <string>Admin Panel</string>
+     </attribute>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>360</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>eASTER eGG</string>
       </property>
      </widget>
     </widget>
@@ -157,9 +166,38 @@
      <string>File</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionPolicy"/>
+    <addaction name="actionCredits_2"/>
+    <addaction name="actionContact_Us"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionPolicy">
+   <property name="text">
+    <string>Policy</string>
+   </property>
+  </action>
+  <action name="actionCredits">
+   <property name="text">
+    <string>Credits</string>
+   </property>
+  </action>
+  <action name="actionCredits_2">
+   <property name="text">
+    <string>Credits</string>
+   </property>
+  </action>
+  <action name="actionContact_Us">
+   <property name="text">
+    <string>Contact Us</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

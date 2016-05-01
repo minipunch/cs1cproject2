@@ -23,8 +23,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     dbManager db;
-
-
 };
 
 #endif // MAINWINDOW_H
