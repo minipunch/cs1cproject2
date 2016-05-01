@@ -86,4 +86,24 @@ QString dbManager::retrieveCustomerUsername(QString username)
 
     return "NO.CUSTOMER.INFO.FOUND";
 }
+bool dbManager::addPerson(const QString &fullName, const QString &userName, const QString &pWord)
+{
+    bool success = false;
+    QSqlQuery query;
+    query.prepare("INSERT INTO users (name, username, password, access)"
+                  "VALUES (:fullName, :userName, :pWord, :access)");
+    query.bindValue(":fullName", fullName);
+    query.bindValue(":userName", userName);
+    query.bindValue(":pWord", pWord);
+    query.bindValue(":access", 1);
+    if(query.exec())
+    {
+        success = true;
+    }
+    else
+    {
+        qDebug() << "It no work!" << query.lastError();
+    }
+    return success;
 
+}

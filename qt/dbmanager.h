@@ -10,7 +10,7 @@ class dbManager
 {
 public:
     dbManager();
-    bool addPerson(const QString& name);
+    bool addPerson(const QString& fullName, const QString& userName, const QString& pWord);
     int checkLogin(QString username, QString pword);
     QString retrieveCustomerName(QString username);
     QString retrieveCustomerUsername(QString username);

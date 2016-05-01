@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dbmanager.h"
-#include <QTextBlock>
+
+#include<QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -84,4 +85,22 @@ void MainWindow::on_signOutButton_clicked()
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
+}
+
+
+
+void MainWindow::on_CreatAcct_clicked()
+{
+    QString name = ui->FNameEdit->text();
+ QString uName= ui->UNameEdit->text();
+    QString pWord = ui->PwordEdit->text();
+
+    if(db.addPerson(name, uName, pWord))
+    {
+        QMessageBox::information(this, tr("Dank!"),
+                                         "It works!!!!!!!!!!!!.");
+    }
+
+
+
 }

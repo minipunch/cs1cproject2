@@ -22,6 +22,9 @@ private slots:
 
     void on_signOutButton_clicked();
 
+
+    void on_CreatAcct_clicked();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;
