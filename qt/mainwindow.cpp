@@ -24,48 +24,11 @@ MainWindow::~MainWindow()
 // sign in button
 void MainWindow::on_signInButton_clicked()
 {
-    QString username = ui->lineEdit->text();
-    QString pword = ui->lineEdit_2->text();
+    QString username = ui->lineEdit->text().simplified();
+    QString pword = ui->lineEdit_2->text().simplified();
+    Login(username, pword);
 
-    // 0 = guest acces level
-    if(db.checkLogin(username, pword) == 0)
-    {
-        qDebug() << "Guest access level detected.";
-    }
-    // 1 = customer acces level
-    else if(db.checkLogin(username, pword) == 1)
-    {
-        isUserLoggedIn = true;
-        currentUserAccessLevel = 1;
-        qDebug() << "Customer access level detected.";
-        // remove customer login tab
-        ui->tabs->removeTab(2);
-        // add customer info tab
-        ui->tabs->addTab(ui->myAccount2, "My Account");
-        // set as active tab
-        ui->tabs->setCurrentIndex(2);
-        // set label info
-        ui->nameLabel->setText(db.retrieveCustomerName(username));
-        ui->usernameLabel->setText(db.retrieveCustomerUsername(username));
-    }
-    // 2 = admin acces level
-    else if(db.checkLogin(username, pword) == 2)
-    {
-        isUserLoggedIn = true;
-        currentUserAccessLevel = 2;
-        qDebug() << "Admin access level detected.";
-        // remove customer login tab
-        ui->tabs->removeTab(2);
-        // add customer info tab
-        ui->tabs->addTab(ui->myAccount2, "My Account");
-        // set as active tab
-        ui->tabs->setCurrentIndex(2);
-        // add admin panel tab
-        ui->tabs->addTab(ui->adminPanel, "Admin Panel");
-        // set label info
-        ui->nameLabel->setText(db.retrieveCustomerName(username));
-        ui->usernameLabel->setText(db.retrieveCustomerUsername(username));
-    }
+
 }
 
 void MainWindow::on_signOutButton_clicked()
@@ -85,22 +48,110 @@ void MainWindow::on_signOutButton_clicked()
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
+    //clear out the line edits
+    ui->Indicator->setText("Guest");
+    ui->lineEdit_2->clear();
+    ui->lineEdit->clear();
+    ui->FNameEdit->clear();
+    ui->PwordEdit->clear();
+    ui->UNameEdit->clear();
+    ui->pWordToggle->setChecked(false);
+    ui->pWordToggle2->setChecked(false);
+
+
 }
 
 
 
 void MainWindow::on_CreatAcct_clicked()
 {
-    QString name = ui->FNameEdit->text();
- QString uName= ui->UNameEdit->text();
-    QString pWord = ui->PwordEdit->text();
+    QString name = ui->FNameEdit->text().simplified();
+
+    QString uName= ui->UNameEdit->text().simplified();
+
+    QString pWord = ui->PwordEdit->text().simplified();
+
+
+    ui->PwordEdit->setEchoMode(QLineEdit::Password);
 
     if(db.addPerson(name, uName, pWord))
     {
-        QMessageBox::information(this, tr("Dank!"),
-                                         "It works!!!!!!!!!!!!.");
+        QMessageBox::information(this, tr("Success!"),
+                                 "It works!!!!!!!!!!!!.");
+           Login(uName, pWord);
     }
 
 
 
 }
+
+void MainWindow::on_pWordToggle_toggled(bool checked)
+{
+    if(checked)
+    {
+        ui->PwordEdit->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        ui->PwordEdit->setEchoMode(QLineEdit::Password);
+    }
+}
+
+void MainWindow::on_pWordToggle2_toggled(bool checked)
+{
+    if(checked)
+    {
+        ui->lineEdit_2->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        ui->lineEdit_2->setEchoMode(QLineEdit::Password);
+    }
+}
+
+
+ void MainWindow::Login(const QString& username, const QString& pword)
+ {
+     // 0 = guest acces level
+     if(db.checkLogin(username, pword) == 0)
+     {
+         qDebug() << "Guest access level detected.";
+     }
+     // 1 = customer acces level
+     else if(db.checkLogin(username, pword) == 1)
+     {
+         isUserLoggedIn = true;
+         currentUserAccessLevel = 1;
+         qDebug() << "Customer access level detected.";
+         // remove customer login tab
+         ui->tabs->removeTab(2);
+         // add customer info tab
+         ui->tabs->addTab(ui->myAccount2, "My Account");
+         // set as active tab
+         ui->tabs->setCurrentIndex(2);
+         // set label info
+         ui->nameLabel->setText(db.retrieveCustomerName(username));
+         ui->Indicator->setText(db.retrieveCustomerName(username));
+         ui->usernameLabel->setText(db.retrieveCustomerUsername(username));
+     }
+     // 2 = admin acces level
+     else if(db.checkLogin(username, pword) == 2)
+     {
+         isUserLoggedIn = true;
+         currentUserAccessLevel = 2;
+         qDebug() << "Admin access level detected.";
+         // remove customer login tab
+         ui->tabs->removeTab(2);
+         // add customer info tab
+         ui->tabs->addTab(ui->myAccount2, "My Account");
+         // set as active tab
+         ui->tabs->setCurrentIndex(2);
+         // add admin panel tab
+         ui->tabs->addTab(ui->adminPanel, "Admin Panel");
+         // set label info
+         ui->nameLabel->setText(db.retrieveCustomerName(username));
+         ui->Indicator->setText(db.retrieveCustomerName(username));
+         ui->usernameLabel->setText(db.retrieveCustomerUsername(username));
+     }
+
+ }
