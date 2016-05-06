@@ -74,18 +74,20 @@ void MainWindow::on_signOutButton_clicked()
 
 void MainWindow::on_CreatAcct_clicked()
 {
-    QString name = ui->FNameEdit->text().simplified();
-
-    QString uName= ui->UNameEdit->text().simplified();
-
-    QString pWord = ui->PwordEdit->text().simplified();
-
+    QString name, uName, pWord, company, street, city, state, zip;
+    name = ui->FNameEdit->text().simplified();
+    uName= ui->UNameEdit->text().simplified();
+    pWord = ui->PwordEdit->text().simplified();
+    company = ui->companyEdit->text().simplified();
+    street = ui->streetEdit->text().simplified();
+    city = ui->cityEdit->text().simplified();
+    state = ui->stateEdit->text().simplified();
+    zip = ui->zipEdit->text().simplified();
 
     ui->PwordEdit->setEchoMode(QLineEdit::Password);
 
-    if(db.addPerson(name, uName, pWord))
+    if(db.addPerson(name,uName,pWord,company,street,city,state,zip))
     {
-
         Login(uName, pWord);
     }
     else

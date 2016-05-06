@@ -63,12 +63,17 @@ int dbManager::checkLogin(QString username, QString pword)
 
 QString dbManager::retrieveCustomerName(QString username)
 {
-    QSqlQuery query("SELECT name FROM users WHERE username = '" + username + "'");
+    QSqlQuery query;
+    query.prepare("SELECT name FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
 
-    while(query.next())
+    if(query.exec())
     {
-        QString customerName = query.value(0).toString();
-        return customerName;
+        if(query.next())
+        {
+            QString customerName = query.value(0).toString();
+            return customerName;
+        }
     }
 
     return "NO.CUSTOMER.INFO.FOUND";
@@ -76,26 +81,36 @@ QString dbManager::retrieveCustomerName(QString username)
 
 QString dbManager::retrieveCustomerUsername(QString username)
 {
-    QSqlQuery query("SELECT username FROM users WHERE username = '" + username + "'");
+    QSqlQuery query;
+    query.prepare("SELECT username FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
 
-    while(query.next())
+    if(query.exec())
     {
-        QString customerUsername = query.value(0).toString();
-        return customerUsername;
+        if(query.next())
+        {
+            QString customerUsername = query.value(0).toString();
+            return customerUsername;
+        }
     }
 
     return "NO.CUSTOMER.INFO.FOUND";
 }
-bool dbManager::addPerson(const QString &fullName, const QString &userName, const QString &pWord)
+bool dbManager::addPerson(const QString &fullName, const QString &userName, const QString &pWord, const QString &company, const QString &street, const QString &city, const QString &state, const QString &zip)
 {
     bool success = false;
     QSqlQuery query;
-    query.prepare("INSERT INTO users (name, username, password, access)"
-                  "VALUES (:fullName, :userName, :pWord, :access)");
+    query.prepare("INSERT INTO users (name, username, password, access, company, street, city, state, zip)"
+                  "VALUES (:fullName, :userName, :pWord, 1, :company, :street, :city, :state, :zip)");
     query.bindValue(":fullName", fullName);
     query.bindValue(":userName", userName);
     query.bindValue(":pWord", pWord);
-    query.bindValue(":access", 1);
+    query.bindValue(":company", company);
+    query.bindValue(":street", street);
+    query.bindValue(":city", city);
+    query.bindValue(":state", state);
+    query.bindValue(":zip", zip);
+
     if(query.exec())
     {
         success = true;
