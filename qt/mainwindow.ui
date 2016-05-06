@@ -39,19 +39,109 @@
    <widget class="QTabWidget" name="tabs">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>60</y>
+      <x>40</x>
+      <y>70</y>
       <width>1111</width>
       <height>611</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
       <string>Welcome</string>
      </attribute>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>50</y>
+        <width>441</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 36pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;Qtπs Cyber Security&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>511</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 20pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a name=&quot;docs-internal-guid-c54f02af-8772-63e4-a872-34c285a4a48f&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:20pt; color:#000000; background-color:transparent;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:20pt; color:#000000; background-color:transparent;&quot;&gt;e provide our customers with the peace of mind that their business is running in a safe and secure environment. We do this by delivering high quality and innovative security services and solutions.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>120</y>
+        <width>401</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Making Cyber Security Great Again&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="picturelabel">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>330</y>
+        <width>321</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;this is a picture, leave it here&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>490</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Check out our products!</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>490</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Already a member?</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="productsTab">
      <attribute name="title">
@@ -736,7 +826,7 @@
     <property name="title">
      <string>About</string>
     </property>
-    <addaction name="actionPolicy"/>
+    <addaction name="actionPolicy_2"/>
     <addaction name="actionCredits_2"/>
     <addaction name="actionContact_Us"/>
     <addaction name="actionHelp"/>
@@ -745,11 +835,6 @@
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionPolicy">
-   <property name="text">
-    <string>Policy</string>
-   </property>
-  </action>
   <action name="actionCredits">
    <property name="text">
     <string>Credits</string>
@@ -768,6 +853,16 @@
   <action name="actionHelp">
    <property name="text">
     <string>Contact Us</string>
+   </property>
+  </action>
+  <action name="actionAboutUs">
+   <property name="text">
+    <string>About Us</string>
+   </property>
+  </action>
+  <action name="actionPolicy_2">
+   <property name="text">
+    <string>Policy</string>
    </property>
   </action>
  </widget>

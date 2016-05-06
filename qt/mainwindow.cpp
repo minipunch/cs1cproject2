@@ -9,6 +9,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //Inserting Picture
+    QPixmap burglar("M:/Pictures/Saved Pictures/sneaker.png");
+    ui->picturelabel->setPixmap(burglar);
+
     isUserLoggedIn = false;
     // remove admin panel tab
     ui->tabs->removeTab(4);
@@ -194,4 +199,20 @@ void MainWindow::Login(const QString& username, const QString& pword)
         setCustomerLabelInfo(username);
     }
 
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->tabs->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->tabs->setCurrentIndex(2);
+}
+
+void MainWindow::on_actionPolicy_2_triggered()
+{
+    QMessageBox::information(this, tr("Guarantee Policy")
+, "We guarantee that you will be satisfied because satisfaction is our gaurantee.");
 }
