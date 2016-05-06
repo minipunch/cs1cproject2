@@ -61,41 +61,6 @@ int dbManager::checkLogin(QString username, QString pword)
 
 }
 
-QString dbManager::retrieveCustomerName(QString username)
-{
-    QSqlQuery query;
-    query.prepare("SELECT name FROM users WHERE username = (:username)");
-    query.bindValue(":username", username);
-
-    if(query.exec())
-    {
-        if(query.next())
-        {
-            QString customerName = query.value(0).toString();
-            return customerName;
-        }
-    }
-
-    return "NO.CUSTOMER.INFO.FOUND";
-}
-
-QString dbManager::retrieveCustomerUsername(QString username)
-{
-    QSqlQuery query;
-    query.prepare("SELECT username FROM users WHERE username = (:username)");
-    query.bindValue(":username", username);
-
-    if(query.exec())
-    {
-        if(query.next())
-        {
-            QString customerUsername = query.value(0).toString();
-            return customerUsername;
-        }
-    }
-
-    return "NO.CUSTOMER.INFO.FOUND";
-}
 bool dbManager::addPerson(const QString &fullName, const QString &userName, const QString &pWord, const QString &company, const QString &street, const QString &city, const QString &state, const QString &zip)
 {
     bool success = false;
@@ -121,4 +86,130 @@ bool dbManager::addPerson(const QString &fullName, const QString &userName, cons
     }
     return success;
 
+}
+
+QString dbManager::retrieveCustomerName(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT name FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerName = query.value(0).toString();
+            return customerName;
+        }
+    }
+
+    return "NO.CUSTOMER.NAME.FOUND";
+}
+
+QString dbManager::retrieveCustomerUsername(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT username FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerUsername = query.value(0).toString();
+            return customerUsername;
+        }
+    }
+
+    return "NO.CUSTOMER.USERNAME.FOUND";
+}
+
+QString dbManager::retrieveCustomerCompany(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT company FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerCompany = query.value(0).toString();
+            return customerCompany;
+        }
+    }
+
+    return "NO.CUSTOMER.COMPANY.FOUND";
+}
+
+QString dbManager::retrieveCustomerStreet(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT street FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerStreet = query.value(0).toString();
+            return customerStreet;
+        }
+    }
+
+    return "NO.CUSTOMER.STREET.FOUND";
+}
+
+QString dbManager::retrieveCustomerCity(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT city FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerCity = query.value(0).toString();
+            return customerCity;
+        }
+    }
+
+    return "NO.CUSTOMER.CITY.FOUND";
+}
+
+QString dbManager::retrieveCustomerState(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT state FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerState = query.value(0).toString();
+            return customerState;
+        }
+    }
+
+    return "NO.CUSTOMER.STATE.FOUND";
+}
+
+QString dbManager::retrieveCustomerZip(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT zip FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString customerZip = query.value(0).toString();
+            return customerZip;
+        }
+    }
+
+    return "NO.CUSTOMER.ZIP.FOUND";
 }

@@ -14,6 +14,11 @@ public:
     int checkLogin(QString username, QString pword);
     QString retrieveCustomerName(QString username);
     QString retrieveCustomerUsername(QString username);
+    QString retrieveCustomerCompany(QString username);
+    QString retrieveCustomerStreet(QString username);
+    QString retrieveCustomerCity(QString username);
+    QString retrieveCustomerState(QString username);
+    QString retrieveCustomerZip(QString username);
 
 private:
     QSqlDatabase db;

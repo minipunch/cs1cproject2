@@ -35,6 +35,8 @@ private:
     bool isUserLoggedIn;
     int currentUserAccessLevel;
     void Login(const QString& username, const QString& pword);
+    void setCustomerLabelInfo(QString customerUsername);
+    void setCustomerLoginTabs(int customerAccessLevel);
 };
 
 #endif // MAINWINDOW_H

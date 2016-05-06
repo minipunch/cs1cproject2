@@ -21,6 +21,43 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::setCustomerLabelInfo(QString customerUsername)
+{
+    // set label info
+    ui->nameLabel->setText(db.retrieveCustomerName(customerUsername));
+    ui->Indicator->setText(db.retrieveCustomerName(customerUsername));
+    ui->usernameLabel->setText(db.retrieveCustomerUsername(customerUsername));
+    ui->companyLabel->setText(db.retrieveCustomerCompany(customerUsername));
+    ui->streetLabel->setText(db.retrieveCustomerStreet(customerUsername));
+    ui->cityLabel->setText(db.retrieveCustomerCity(customerUsername));
+    ui->stateLabel->setText(db.retrieveCustomerState(customerUsername));
+    ui->zipLabel->setText(db.retrieveCustomerZip(customerUsername));
+}
+
+void MainWindow::setCustomerLoginTabs(int customerAccessLevel)
+{
+    if(customerAccessLevel == 1)
+    {
+        // remove customer login tab
+        ui->tabs->removeTab(2);
+        // add customer info tab
+        ui->tabs->addTab(ui->myAccount2, "My Account");
+        // set as active tab
+        ui->tabs->setCurrentIndex(2);
+    }
+    else if(customerAccessLevel == 2)
+    {
+        // remove customer login tab
+        ui->tabs->removeTab(2);
+        // add customer info tab
+        ui->tabs->addTab(ui->myAccount2, "My Account");
+        // set as active tab
+        ui->tabs->setCurrentIndex(2);
+        // add admin panel tab
+        ui->tabs->addTab(ui->adminPanel, "Admin Panel");
+    }
+}
+
 // sign in button
 void MainWindow::on_signInButton_clicked()
 {
@@ -47,6 +84,8 @@ void MainWindow::on_signOutButton_clicked()
         ui->tabs->removeTab(2);
         ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
+        // set as myAccount tab as active
+        ui->tabs->setCurrentIndex(2);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
@@ -54,6 +93,8 @@ void MainWindow::on_signOutButton_clicked()
     {
         ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
+        // set as myAccount tab as active
+        ui->tabs->setCurrentIndex(2);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
@@ -69,8 +110,6 @@ void MainWindow::on_signOutButton_clicked()
 
 
 }
-
-
 
 void MainWindow::on_CreatAcct_clicked()
 {
@@ -138,16 +177,10 @@ void MainWindow::Login(const QString& username, const QString& pword)
         isUserLoggedIn = true;
         currentUserAccessLevel = 1;
         qDebug() << "Customer access level detected.";
-        // remove customer login tab
-        ui->tabs->removeTab(2);
-        // add customer info tab
-        ui->tabs->addTab(ui->myAccount2, "My Account");
-        // set as active tab
-        ui->tabs->setCurrentIndex(2);
-        // set label info
-        ui->nameLabel->setText(db.retrieveCustomerName(username));
-        ui->Indicator->setText(db.retrieveCustomerName(username));
-        ui->usernameLabel->setText(db.retrieveCustomerUsername(username));
+        // set proper tabs
+        setCustomerLoginTabs(currentUserAccessLevel);
+        // set customer label info
+        setCustomerLabelInfo(username);
     }
     // 2 = admin acces level
     else if(db.checkLogin(username, pword) == 2)
@@ -155,18 +188,10 @@ void MainWindow::Login(const QString& username, const QString& pword)
         isUserLoggedIn = true;
         currentUserAccessLevel = 2;
         qDebug() << "Admin access level detected.";
-        // remove customer login tab
-        ui->tabs->removeTab(2);
-        // add customer info tab
-        ui->tabs->addTab(ui->myAccount2, "My Account");
-        // set as active tab
-        ui->tabs->setCurrentIndex(2);
-        // add admin panel tab
-        ui->tabs->addTab(ui->adminPanel, "Admin Panel");
-        // set label info
-        ui->nameLabel->setText(db.retrieveCustomerName(username));
-        ui->Indicator->setText(db.retrieveCustomerName(username));
-        ui->usernameLabel->setText(db.retrieveCustomerUsername(username));
+        // set proper tabs
+        setCustomerLoginTabs(currentUserAccessLevel);
+        // set customer label info
+        setCustomerLabelInfo(username);
     }
 
 }
