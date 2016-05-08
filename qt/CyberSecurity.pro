@@ -20,3 +20,6 @@ HEADERS  += mainwindow.h \
     dbmanager.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    DatabaseCode

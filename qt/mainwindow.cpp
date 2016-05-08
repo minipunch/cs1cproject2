@@ -216,3 +216,10 @@ void MainWindow::on_actionPolicy_2_triggered()
     QMessageBox::information(this, tr("Guarantee Policy")
 , "We guarantee that you will be satisfied because satisfaction is our gaurantee.");
 }
+
+void MainWindow::on_actionHelp_triggered()
+{
+    QMessageBox::information(this, tr("Contact Us")
+, "If you have any complaints or feedback, you may contact us through the number (555)666-7777\nOr you may mail it instead to our P.O. Box at\n"
+    "555 Suck It Blvd. Home of the Bald Eagles 66666, India");
+}
