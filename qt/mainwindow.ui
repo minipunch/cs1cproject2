@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -784,12 +784,15 @@
       <string>Admin Panel</string>
      </attribute>
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0">
+      <item row="1" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
          <string>eASTER eGG</string>
         </property>
        </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QTableView" name="tableView"/>
       </item>
      </layout>
     </widget>

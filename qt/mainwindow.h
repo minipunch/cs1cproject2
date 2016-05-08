@@ -37,6 +37,8 @@ private slots:
 
     void on_actionHelp_triggered();
 
+    void on_tableView_activated(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     dbManager db;

@@ -213,3 +213,7 @@ QString dbManager::retrieveCustomerZip(QString username)
 
     return "NO.CUSTOMER.ZIP.FOUND";
 }
+
+QSqlDatabase dbManager::getDB(){
+    return db;
+}

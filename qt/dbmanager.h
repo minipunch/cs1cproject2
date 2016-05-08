@@ -19,7 +19,7 @@ public:
     QString retrieveCustomerCity(QString username);
     QString retrieveCustomerState(QString username);
     QString retrieveCustomerZip(QString username);
-
+    QSqlDatabase getDB();
 private:
     QSqlDatabase db;
 };

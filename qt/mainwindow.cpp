@@ -214,7 +214,7 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_actionPolicy_2_triggered()
 {
     QMessageBox::information(this, tr("Guarantee Policy")
-, "We guarantee that you will be satisfied because satisfaction is our gaurantee.");
+, "We guarantee that you will be satisfied because satisfaction is our guarantee.");
 }
 
 void MainWindow::on_actionHelp_triggered()
@@ -223,3 +223,34 @@ void MainWindow::on_actionHelp_triggered()
 , "If you have any complaints or feedback, you may contact us through the number (555)666-7777\nOr you may mail it instead to our P.O. Box at\n"
     "555 Suck It Blvd. Home of the Bald Eagles 66666, India");
 }
+
+//void MainWindow::on_tableView_activated(const QModelIndex &index)
+//{
+//    QSqlQueryModel *model = new QSqlQueryModel();
+//    QSqlQuery *qry = new QSqlQuery(db.getDB());
+//    qry->prepare(select )
+
+//    QSqlTableModel *model = new QSqlTableModel(this, db.getDB());
+//    model->setTable("Customers");
+//    model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+//    model->select();
+//    model->setHeaderData(0, Qt::Horizontal, QObject::tr("userid"));
+//    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Name"));
+//    model->setHeaderData(2, Qt::Horizontal, QObject::tr("User Name"));
+//    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Password"));
+//    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Access Level"));
+//    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Company"));
+//    model->setHeaderData(6, Qt::Horizontal, QObject::tr("Street"));
+//    model->setHeaderData(7, Qt::Horizontal, QObject::tr("City"));
+//    model->setHeaderData(8, Qt::Horizontal, QObject::tr("State"));
+//    model->setHeaderData(9, Qt::Horizontal, QObject::tr("Zip"));
+//    model->setHeaderData(10, Qt::Horizontal, QObject::tr("Product"));
+//    model->setHeaderData(11, Qt::Horizontal, QObject::tr("Licenes"));
+//    model->setHeaderData(12, Qt::Horizontal, QObject::tr("Platform"));
+//    model->setHeaderData(13, Qt::Horizontal, QObject::tr("Key"));
+//    model->setHeaderData(14, Qt::Horizontal, QObject::tr("Interest Level"));
+
+//    QTableView *view = new QTableView;
+//    view->setModel(model);
+//    view->show();
+//}
