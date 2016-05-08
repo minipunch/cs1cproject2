@@ -122,7 +122,7 @@ void MainWindow::on_signOutButton_clicked()
 
 
 }
-
+//new user creates an account, can only be customer access level
 void MainWindow::on_CreatAcct_clicked()
 {
     QString name, uName, pWord, company, street, city, state, zip;
@@ -150,7 +150,7 @@ void MainWindow::on_CreatAcct_clicked()
 
 
 }
-
+//show password
 void MainWindow::on_pWordToggle_toggled(bool checked)
 {
     if(checked)
@@ -162,7 +162,7 @@ void MainWindow::on_pWordToggle_toggled(bool checked)
         ui->PwordEdit->setEchoMode(QLineEdit::Password);
     }
 }
-
+//show password
 void MainWindow::on_pWordToggle2_toggled(bool checked)
 {
     if(checked)
@@ -175,7 +175,7 @@ void MainWindow::on_pWordToggle2_toggled(bool checked)
     }
 }
 
-
+//logs in the correct people
 void MainWindow::Login(const QString& username, const QString& pword)
 {
     // 0 = guest acces level
@@ -324,7 +324,7 @@ void MainWindow::on_purchasesButton_clicked()
     ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Total Company Spent"));
 
 }
-
+//shortcut login button
 void MainWindow::on_pushButton_3_clicked()
 {
     this->Login("yuge","wall");

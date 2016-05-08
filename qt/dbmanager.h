@@ -5,6 +5,7 @@
 #include <QtDebug>
 #include <QFileInfo>
 #include <qarraydata.h>
+#include "user.h"
 
 class dbManager
 {

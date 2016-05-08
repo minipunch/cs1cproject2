@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -997,13 +997,22 @@
        </rect>
       </property>
      </widget>
+     <zorder>companyEdit_2</zorder>
+     <zorder>nameEdit</zorder>
+     <zorder>label_26</zorder>
+     <zorder>label_24</zorder>
+     <zorder>streetEdit_2</zorder>
+     <zorder>label_23</zorder>
+     <zorder>zipcodeEdit</zorder>
+     <zorder>label_25</zorder>
+     <zorder>label_28</zorder>
+     <zorder>label_27</zorder>
+     <zorder>usernameEdit</zorder>
      <zorder>label_21</zorder>
      <zorder>customerInfoBox_2</zorder>
      <zorder>signOutButton</zorder>
      <zorder>signOutButton_2</zorder>
-     <zorder>customerInfoBox_3</zorder>
      <zorder>EditLabel</zorder>
-     <zorder>layoutWidget_2</zorder>
      <zorder>label_16</zorder>
      <zorder>signOutButton_3</zorder>
      <zorder>signOutButton_4</zorder>
