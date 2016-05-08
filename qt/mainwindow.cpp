@@ -19,6 +19,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tabs->removeTab(4);
     // remove customer info tab
     ui->tabs->removeTab(3);
+
+    // set up columns/rows for admin panel table
+    for(int x = 0; x < 10; x++)
+    {
+        ui->CustomersTable->insertColumn(x);
+        ui->CustomersTable->insertRow(x);
+    }
 }
 
 MainWindow::~MainWindow()
@@ -224,33 +231,106 @@ void MainWindow::on_actionHelp_triggered()
     "555 Suck It Blvd. Home of the Bald Eagles 66666, India");
 }
 
-//void MainWindow::on_tableView_activated(const QModelIndex &index)
-//{
-//    QSqlQueryModel *model = new QSqlQueryModel();
-//    QSqlQuery *qry = new QSqlQuery(db.getDB());
-//    qry->prepare(select )
 
-//    QSqlTableModel *model = new QSqlTableModel(this, db.getDB());
-//    model->setTable("Customers");
-//    model->setEditStrategy(QSqlTableModel::OnManualSubmit);
-//    model->select();
-//    model->setHeaderData(0, Qt::Horizontal, QObject::tr("userid"));
-//    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Name"));
-//    model->setHeaderData(2, Qt::Horizontal, QObject::tr("User Name"));
-//    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Password"));
-//    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Access Level"));
-//    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Company"));
-//    model->setHeaderData(6, Qt::Horizontal, QObject::tr("Street"));
-//    model->setHeaderData(7, Qt::Horizontal, QObject::tr("City"));
-//    model->setHeaderData(8, Qt::Horizontal, QObject::tr("State"));
-//    model->setHeaderData(9, Qt::Horizontal, QObject::tr("Zip"));
-//    model->setHeaderData(10, Qt::Horizontal, QObject::tr("Product"));
-//    model->setHeaderData(11, Qt::Horizontal, QObject::tr("Licenes"));
-//    model->setHeaderData(12, Qt::Horizontal, QObject::tr("Platform"));
-//    model->setHeaderData(13, Qt::Horizontal, QObject::tr("Key"));
-//    model->setHeaderData(14, Qt::Horizontal, QObject::tr("Interest Level"));
+void MainWindow::on_keyCustomersButton_clicked()
+{
+    ui->CustomersTable->clear();
+    ui->CustomersTable->horizontalHeader()->setVisible(true);
 
-//    QTableView *view = new QTableView;
-//    view->setModel(model);
-//    view->show();
-//}
+
+    /* Sets the columns of the of table for Registered customers*/
+    ui->CustomersTable->setHorizontalHeaderItem(0, new QTableWidgetItem("Name"));
+    ui->CustomersTable->setHorizontalHeaderItem(1, new QTableWidgetItem("Username"));
+    ui->CustomersTable->setHorizontalHeaderItem(2, new QTableWidgetItem("Company"));
+    ui->CustomersTable->setHorizontalHeaderItem(3, new QTableWidgetItem("Interest"));
+
+
+    /*  Will fill tables depending on how information is collected from database
+     *   need to run through a loop
+     */
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Customer Name"));
+    ui->CustomersTable->setItem(0, 1, new QTableWidgetItem("Customer Username"));
+    ui->CustomersTable->setItem(0, 2, new QTableWidgetItem("Company Name"));
+    ui->CustomersTable->setItem(0, 3, new QTableWidgetItem("Company Interest"));
+}
+
+void MainWindow::on_registeredButton_clicked()
+{
+
+    ui->CustomersTable->clear();
+
+    ui->CustomersTable->horizontalHeader()->setVisible(true);
+
+
+    /* Sets the columns of the of table for Registered customers*/
+    ui->CustomersTable->setHorizontalHeaderItem(0, new QTableWidgetItem("Name"));
+
+    ui->CustomersTable->setHorizontalHeaderItem(0, new QTableWidgetItem("Username"));
+
+    ui->CustomersTable->setHorizontalHeaderItem(0, new QTableWidgetItem("Company"));
+
+    ui->CustomersTable->setHorizontalHeaderItem(0, new QTableWidgetItem("Interest"));
+
+
+    /*  Will fill tables depending on how information is collected from database
+     *   need to run through a loop
+     */
+
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Customer Name"));
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Customer Username"));
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Company Name"));
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Company Interest"));
+
+}
+
+void MainWindow::on_purchasesButton_clicked()
+{
+
+    int col = 0;
+
+    ui->CustomersTable->clear();
+
+    ui->CustomersTable->horizontalHeader()->setVisible(true);
+
+    /* Sets the columns of the of table for Registered customers*/
+    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Company"));
+    col++;
+
+    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Level"));
+    col++;
+
+    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Quantity"));
+    col++;
+
+    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Total Spent"));
+    col++;
+
+
+    /*  Will fill tables depending on how information is collected from database
+     *   need to run through a loop
+     */
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Company Name"));
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Level Bought"));
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Quantity Bought"));
+
+    ui->CustomersTable->setItem(0, 0, new QTableWidgetItem("Total Company Spent"));
+
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    this->Login("yuge","wall");
+}
+
+void MainWindow::on_signOutButton_2_clicked()
+{
+    ui->EditLabel->setVisible(true);
+}

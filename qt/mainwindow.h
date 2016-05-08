@@ -39,6 +39,16 @@ private slots:
 
     void on_tableView_activated(const QModelIndex &index);
 
+    void on_keyCustomersButton_clicked();
+
+    void on_registeredButton_clicked();
+
+    void on_purchasesButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_signOutButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;
