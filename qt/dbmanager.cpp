@@ -61,20 +61,27 @@ int dbManager::checkLogin(QString username, QString pword)
 
 }
 
-bool dbManager::addPerson(const QString &fullName, const QString &userName, const QString &pWord, const QString &company, const QString &street, const QString &city, const QString &state, const QString &zip)
+bool dbManager::addPerson(User toAdd)
 {
     bool success = false;
     QSqlQuery query;
-    query.prepare("INSERT INTO users (name, username, password, access, company, street, city, state, zip)"
-                  "VALUES (:fullName, :userName, :pWord, 1, :company, :street, :city, :state, :zip)");
-    query.bindValue(":fullName", fullName);
-    query.bindValue(":userName", userName);
-    query.bindValue(":pWord", pWord);
-    query.bindValue(":company", company);
-    query.bindValue(":street", street);
-    query.bindValue(":city", city);
-    query.bindValue(":state", state);
-    query.bindValue(":zip", zip);
+    query.prepare("INSERT INTO users (name, username, password, access, company, street, city, state, zip, protectionlvl, licenses, platform, key, interestLvl)"
+                  "VALUES (:fullName, :userName, :pWord, :access, :company, :street, :city, :state, :zip, :proLvl, :license, :platform, :key, :interest)");
+
+    query.bindValue(":fullName", toAdd.getRName());
+    query.bindValue(":userName", toAdd.getUName());
+    query.bindValue(":pWord", toAdd.getpWord());
+    query.bindValue(":access", toAdd.getAccess());
+    query.bindValue(":company", toAdd.getCompany());
+    query.bindValue(":street", toAdd.getStreet());
+    query.bindValue(":city", toAdd.getCity());
+    query.bindValue(":state", toAdd.getState());
+    query.bindValue(":zip", toAdd.getZip());
+    query.bindValue(":proLvl", toAdd.getProtection());
+    query.bindValue(":license", toAdd.getLicenses());
+    query.bindValue(":platform", toAdd.getPlatform());
+    query.bindValue(":key", toAdd.getKey());
+    query.bindValue(":interest", toAdd.getInterest());
 
     if(query.exec())
     {
@@ -213,7 +220,29 @@ QString dbManager::retrieveCustomerZip(QString username)
 
     return "NO.CUSTOMER.ZIP.FOUND";
 }
+QVector<QString> dbManager::getUserNames(int parameter)
+{
 
-QSqlDatabase dbManager::getDB(){
-    return db;
+    QSqlQuery query;
+    QVector<QString> names;
+    //show only customers
+    //more parameters can be added as needed
+    if(parameter == 1)
+    {
+        query.prepare("SELECT username FROM users WHERE access = 1");
+
+        if(query.exec())
+        {
+            while(query.next())
+            {
+                names.push_back(query.value(0).toString());
+            }
+        }
+       for(int i = 0; i < names.size(); i++)
+       {
+           qDebug() << names.at(i) << endl;
+       }
+    }
+
+    return names;
 }

@@ -6,12 +6,13 @@
 #include <QFileInfo>
 #include <qarraydata.h>
 #include "user.h"
+#include <QVector>
 
 class dbManager
 {
 public:
     dbManager();
-    bool addPerson(const QString &fullName, const QString &userName, const QString &pWord, const QString &company, const QString &street, const QString &city, const QString &state, const QString &zip);
+    bool addPerson(User toAdd);
     int checkLogin(QString username, QString pword);
     QString retrieveCustomerName(QString username);
     QString retrieveCustomerUsername(QString username);
@@ -20,7 +21,8 @@ public:
     QString retrieveCustomerCity(QString username);
     QString retrieveCustomerState(QString username);
     QString retrieveCustomerZip(QString username);
-    QSqlDatabase getDB();
+    QVector<QString> getUserNames(int parameter);
+
 private:
     QSqlDatabase db;
 };

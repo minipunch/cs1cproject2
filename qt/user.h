@@ -19,7 +19,10 @@ public:
     ~User();
 
     //setters unique
-    //void newAdmin(QString realName, )
+    void newAdmin(QString realName,QString uName, QString pWord);
+    void newCustomer(QString realName,QString uName, QString pWord,
+                     QString company,  QString street, QString city,
+                     QString state, int zip, QString interest);
 
 
     //setters, generic
@@ -32,6 +35,8 @@ public:
     void setStreet(QString street);
     void setCity(QString city);
     void setState(QString state);
+    void setZip(int zip);
+    void setProtection(QString protectionLvl);
     void setLicenses(int licenses);
     void setPlatform(QString platform);
     void setKey(bool isKey);
@@ -45,7 +50,10 @@ public:
     int getAccess() const;
     QString getCompany() const;
     QString getStreet() const;
+    QString getCity() const;
     QString getState() const;
+    int getZip() const;
+    QString getProtection() const;
     int getLicenses() const;
     QString getPlatform() const;
     bool getKey() const;
@@ -61,6 +69,8 @@ private:
     QString street;
     QString city;
     QString state;
+    int zip;
+    QString protectionLvl;
     int licenses; //number of licenses registered
     QString platform;
     bool isKey;

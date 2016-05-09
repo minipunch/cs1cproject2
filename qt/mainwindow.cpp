@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dbmanager.h"
-
+#include <QVector>
 #include<QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -26,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->CustomersTable->insertColumn(x);
         ui->CustomersTable->insertRow(x);
     }
+
+
 }
 
 MainWindow::~MainWindow()
@@ -75,16 +77,26 @@ void MainWindow::on_signInButton_clicked()
 {
     QString username = ui->lineEdit->text().simplified();
     QString pword = ui->lineEdit_2->text().simplified();
-    try
+
+    if(username.isEmpty() || pword.isEmpty())
     {
-        Login(username, pword);
-    }catch(...)
-    {
-        //temp message
-        //this should change to be a label that displays on screen
         QMessageBox::information(this, tr("Invalid!"),
-                                 "Invalid username or password, please try again.");
+                                 "Please fill both fields");
     }
+    else
+    {
+        try
+        {
+            Login(username, pword);
+        }catch(...)
+        {
+            //temp message
+            //this should change to be a label that displays on screen
+            QMessageBox::information(this, tr("Invalid!"),
+                                     "Invalid username or password, please try again.");
+        }
+    }
+
 
 
 }
@@ -120,34 +132,56 @@ void MainWindow::on_signOutButton_clicked()
     ui->pWordToggle->setChecked(false);
     ui->pWordToggle2->setChecked(false);
 
+    ui->FNameEdit->clear();
+    ui->companyEdit->clear();
+    ui->streetEdit->clear();
+    ui->cityEdit->clear();
+    ui->stateEdit->setCurrentIndex(0);
+    ui->zipEdit->clear();
+    ui->UNameEdit->clear();
+    ui->PwordEdit->clear();
+    ui->InterestEdit->setCurrentIndex(0);
+
 
 }
 //new user creates an account, can only be customer access level
 void MainWindow::on_CreatAcct_clicked()
 {
-    QString name, uName, pWord, company, street, city, state, zip;
+    User toAdd;
+    QString name, uName, pWord, company, street, city, state, zipTemp, interest;
     name = ui->FNameEdit->text().simplified();
     uName= ui->UNameEdit->text().simplified();
     pWord = ui->PwordEdit->text().simplified();
     company = ui->companyEdit->text().simplified();
     street = ui->streetEdit->text().simplified();
     city = ui->cityEdit->text().simplified();
-    state = ui->stateEdit->text().simplified();
-    zip = ui->zipEdit->text().simplified();
+    state = ui->stateEdit->currentText();
+    zipTemp = ui->zipEdit->text().simplified();
+    int zip = zipTemp.toInt();
+    interest = ui->InterestEdit->currentText();
 
-    ui->PwordEdit->setEchoMode(QLineEdit::Password);
-
-    if(db.addPerson(name,uName,pWord,company,street,city,state,zip))
+    if(name.isEmpty() || uName.isEmpty() || pWord.isEmpty() || company.isEmpty() || street.isEmpty() ||
+       city.isEmpty() || zipTemp.isEmpty())
     {
-        Login(uName, pWord);
+        QMessageBox::information(this, tr("Invalid!"),
+                                 "Please fill all fields.");
     }
     else
     {
-        QMessageBox::information(this, tr("Invalid!"),
-                                 "Username is taken, pick another .");
+        toAdd.newCustomer(name, uName, pWord, company, street, city, state, zip, interest);
+
+        ui->PwordEdit->setEchoMode(QLineEdit::Password);
+
+        if(db.addPerson(toAdd))
+        {
+            Login(uName, pWord);
+        }
+        else
+        {
+            QMessageBox::information(this, tr("Invalid!"),
+                                     "Username is taken, pick another .");
+        }
     }
-
-
 
 }
 //show password

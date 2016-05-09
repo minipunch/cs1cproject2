@@ -20,11 +20,52 @@ User::User()
     interest = " ";
 
 }
+
 User::~User()
 {
 
 }
-//setters
+
+//setters unique
+
+void User::newAdmin(QString realName,QString uName, QString pWord)
+{
+    this->realName = realName;
+    this->uName = uName;
+    this->pWord = pWord;
+    access = 2;\
+    company = "Qtπ's Security";
+    street = "28000 Marguerite Pkwy";
+    city = "Mission Viejo";
+    state = "CA";
+    zip = 92692;
+    protectionLvl = "Platinum";
+    licenses = 0;
+    platform = "Windows";
+    isKey = false;
+    interest = "very interested";
+}
+void User::newCustomer(QString realName, QString uName, QString pWord, QString company,
+                       QString street, QString city, QString state, int zip, QString interest)
+{
+    this->realName = realName;
+    this->uName = uName;
+    this->pWord = pWord;
+    this->company = company;
+    this->street = street;
+    this->city = city;
+    this->state = state;
+    this->zip = zip;
+    this->interest = interest;
+    access = 1;
+    licenses = 0;
+    isKey = false;
+    protectionLvl = "no protection";
+    platform = "n/a";
+
+}
+
+//setters, generic
 void User::setId(int id)
 {
     this->id = id;
@@ -61,6 +102,15 @@ void User::setState(QString state)
 {
     this->state = state;
 }
+void User::setZip(int zip)
+{
+    this->zip = zip;
+}
+void User::setProtection(QString protectionLvl)
+{
+    this->protectionLvl = protectionLvl;
+}
+
 void User::setLicenses(int licenses)
 {
     this->licenses = licenses;
@@ -124,9 +174,21 @@ QString User::getStreet() const
 {
     return street;
 }
+QString User::getCity() const
+{
+    return city;
+}
 QString User::getState() const
 {
     return state;
+}
+int User::getZip() const
+{
+    return zip;
+}
+QString User::getProtection() const
+{
+    return protectionLvl;
 }
 int User::getLicenses() const
 {
