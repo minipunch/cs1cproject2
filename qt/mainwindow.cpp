@@ -293,7 +293,6 @@ void MainWindow::on_registeredButton_clicked()
 {
 
     ui->CustomersTable->clear();
-
     ui->CustomersTable->horizontalHeader()->setVisible(true);
 
 
