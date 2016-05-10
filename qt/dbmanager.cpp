@@ -3,7 +3,7 @@
 dbManager::dbManager()
 {
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("cybersecurity.db");
+    db.setDatabaseName("../cybersecurity.db");
 
     if(!db.open())
         qDebug() << "Not connected to DB.";

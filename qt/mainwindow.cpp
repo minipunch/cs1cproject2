@@ -125,7 +125,7 @@ void MainWindow::on_signOutButton_clicked()
         ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
-        ui->tabs->setCurrentIndex(2);
+        ui->tabs->setCurrentIndex(3);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
@@ -134,7 +134,7 @@ void MainWindow::on_signOutButton_clicked()
         ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
-        ui->tabs->setCurrentIndex(2);
+        ui->tabs->setCurrentIndex(3);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
@@ -152,7 +152,7 @@ void MainWindow::on_signOutButton_clicked()
     ui->companyEdit->clear();
     ui->streetEdit->clear();
     ui->cityEdit->clear();
-    ui->stateEdit_2->setCurrentIndex(0);
+    ui->stateEdit->setCurrentIndex(0);
     ui->zipEdit->clear();
     ui->UNameEdit->clear();
     ui->PwordEdit->clear();
@@ -173,7 +173,7 @@ void MainWindow::on_CreatAcct_clicked()
     company = ui->companyEdit->text().simplified();
     street = ui->streetEdit->text().simplified();
     city = ui->cityEdit->text().simplified();
-    state = ui->stateEdit->text().simplified();
+    state = ui->stateEdit->currentText();
     zipTemp = ui->zipEdit->text().simplified();
     int zip = zipTemp.toInt();
     interest = ui->InterestEdit->currentText();
