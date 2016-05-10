@@ -213,13 +213,128 @@ QString dbManager::retrieveCustomerZip(QString username)
     {
         if(query.next())
         {
-            QString customerZip = query.value(0).toString();
-            return customerZip;
+            QString protection = query.value(0).toString();
+            return protection;
         }
     }
 
-    return "NO.CUSTOMER.ZIP.FOUND";
+    return "NO.CUSTOMER.PROTECTION.LEVEL.FOUND";
 }
+
+QString dbManager::retrieveCustomerLevel(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT protectionlvl FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString protection = query.value(0).toString();
+            if(protection == NULL)
+            {
+                protection = "N/A";
+            }
+
+            return protection;
+        }
+    }
+
+    return "NO.CUSTOMER.PROTECTION.LEVEL.FOUND";
+}
+
+QString dbManager::retrieveCustomerLiscenses(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT licenses FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString licenses = query.value(0).toString();
+
+            if(licenses == NULL)
+            {
+                licenses = "0";
+            }
+
+            return licenses;
+        }
+    }
+
+    return "NO.CUSTOMER.LISCENSES.FOUND";
+}
+
+QString dbManager::retrieveCustomerPlatform(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT platform FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString platform = query.value(0).toString();
+            if(platform == NULL)
+            {
+                platform = "N/A";
+            }
+            return platform;
+        }
+    }
+
+    return "NO.CUSTOMER.PLATFORM.FOUND";
+}
+
+QString dbManager::retrieveCustomerKey(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT key FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString platform = query.value(0).toString();
+            if(platform == "0")
+            {
+                platform = "No";
+            }
+            else
+            {
+                platform = "Yes";
+            }
+            return platform;
+        }
+    }
+
+    return "NO.CUSTOMER.PLATFORM.FOUND";
+}
+
+QString dbManager::retrieveCustomerInterest(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT interestLvl FROM users WHERE username = (:username)");
+    query.bindValue(":username", username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString interest = query.value(0).toString();
+            return interest;
+        }
+    }
+
+    return "NO.CUSTOMER.INTEREST.FOUND";
+}
+
+
 QVector<QString> dbManager::getUserNames(int parameter)
 {
 
@@ -242,6 +357,30 @@ QVector<QString> dbManager::getUserNames(int parameter)
        {
            qDebug() << names.at(i) << endl;
        }
+    }
+    else if(parameter == 2)
+    {
+        query.prepare("SELECT username FROM users WHERE access = 2");
+
+        if(query.exec())
+        {
+            while(query.next())
+            {
+                names.push_back(query.value(0).toString());
+            }
+        }
+    }
+    else if(parameter == 3)
+    {
+        query.prepare("SELECT username FROM users WHERE key = 1");
+
+        if(query.exec())
+        {
+            while(query.next())
+            {
+                names.push_back(query.value(0).toString());
+            }
+        }
     }
 
     return names;

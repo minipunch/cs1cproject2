@@ -6,7 +6,7 @@
 #include <QFileInfo>
 #include <qarraydata.h>
 #include "user.h"
-#include <QVector>
+#include <QVector>f
 
 class dbManager
 {
@@ -21,6 +21,11 @@ public:
     QString retrieveCustomerCity(QString username);
     QString retrieveCustomerState(QString username);
     QString retrieveCustomerZip(QString username);
+    QString retrieveCustomerLevel(QString username);
+    QString retrieveCustomerLiscenses(QString username);
+    QString retrieveCustomerPlatform(QString username);
+    QString retrieveCustomerKey(QString username);
+    QString retrieveCustomerInterest(QString username);
     QVector<QString> getUserNames(int parameter);
 
 private:

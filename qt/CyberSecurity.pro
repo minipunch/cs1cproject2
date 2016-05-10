@@ -22,6 +22,3 @@ HEADERS  += mainwindow.h \
     user.h
 
 FORMS    += mainwindow.ui
-
-DISTFILES += \
-    DatabaseCode
