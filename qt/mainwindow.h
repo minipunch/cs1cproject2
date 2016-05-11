@@ -54,6 +54,8 @@ private slots:
 
     void on_adminButton_clicked();//
 
+    void on_BuyButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;
@@ -62,6 +64,7 @@ private:
     void Login(const QString& username, const QString& pword);//
     void setCustomerLabelInfo(QString customerUsername);
     void setCustomerLoginTabs(int customerAccessLevel);
+    QString username;
 };
 
 #endif // MAINWINDOW_H

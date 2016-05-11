@@ -115,6 +115,7 @@ void MainWindow::on_signInButton_clicked()
     }
 
 
+
 }
 
 void MainWindow::on_signOutButton_clicked()
@@ -158,7 +159,7 @@ void MainWindow::on_signOutButton_clicked()
     ui->PwordEdit->clear();
     ui->InterestEdit->setCurrentIndex(0);
 
-
+    username = "guest";
 }
 
 
@@ -230,6 +231,8 @@ void MainWindow::on_pWordToggle2_toggled(bool checked)
 
 void MainWindow::Login(const QString& username, const QString& pword)
 {
+
+
     // 0 = guest acces level
     if(db.checkLogin(username, pword) == 0)
     {
@@ -245,6 +248,8 @@ void MainWindow::Login(const QString& username, const QString& pword)
         setCustomerLoginTabs(currentUserAccessLevel);
         // set customer label info
         setCustomerLabelInfo(username);
+
+        this->username = username;
     }
     // 2 = admin acces level
     else if(db.checkLogin(username, pword) == 2)
@@ -256,6 +261,7 @@ void MainWindow::Login(const QString& username, const QString& pword)
         setCustomerLoginTabs(currentUserAccessLevel);
         // set customer label info
         setCustomerLabelInfo(username);
+        this->username = username;
     }
 
 }
@@ -295,6 +301,11 @@ void MainWindow::on_saveButton_clicked()
     ui->EditAccountBox->setVisible(false);
     ui->EditLabel->setVisible(false);
     ui->saveButton->setVisible(false);
+
+
+
+
+
 }
 
 
@@ -512,4 +523,23 @@ void MainWindow::on_adminButton_clicked()
 
     ui->CustomersTable->resizeColumnsToContents();
     ui->CustomersTable->horizontalHeader()->setStretchLastSection(true);
+}
+
+void MainWindow::on_BuyButton_clicked()
+{
+    QString platform = ui->platformBox->currentText();
+    QString level    = ui->levelBox->currentText();
+    QString quantity = ui->quantityEdit->text();
+
+    if(db.BuyProducts(username, platform, level, quantity))
+    {
+       QMessageBox::information(this, tr("Success"), "Successfully purchased products");
+    }
+    else
+    {
+        QMessageBox::information(this, tr("Unsuccessful"), "Order did not go through. Please try again");
+    }
+
+
+
 }

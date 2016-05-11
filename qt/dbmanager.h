@@ -6,7 +6,7 @@
 #include <QFileInfo>
 #include <qarraydata.h>
 #include "user.h"
-#include <QVector>f
+#include <QVector>
 
 class dbManager
 {
@@ -27,6 +27,7 @@ public:
     QString retrieveCustomerKey(QString username);
     QString retrieveCustomerInterest(QString username);
     QVector<QString> getUserNames(int parameter);
+    bool BuyProducts(QString username, QString platform, QString level, QString quantity);
 
 private:
     QSqlDatabase db;

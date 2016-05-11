@@ -385,3 +385,21 @@ QVector<QString> dbManager::getUserNames(int parameter)
 
     return names;
 }
+
+bool dbManager::BuyProducts(QString username, QString platform, QString level, QString quantity)
+{
+    QSqlQuery query;
+    bool successful = false;
+
+    query.prepare("UPDATE users set protectionlvl='" + level + "',licenses='" + quantity +
+                  "',platform='" + platform + "' where username='" + username + "'");
+
+    if(query.exec())
+    {
+        qDebug() << "Updated info";
+        successful = true;
+
+    }
+
+    return successful;
+}
