@@ -56,6 +56,8 @@ private slots:
 
     void on_BuyButton_clicked();
 
+    void on_lineEdit_2_returnPressed();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;

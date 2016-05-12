@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QPixmap burglar(":/images/sneaker.png");
     ui->picturelabel->setPixmap(burglar);
 
-
+    username = "Guest";
     /* Sets the widgets to not visable until it is needed*/
     ui->EditAccountBox->setVisible(false);
     ui->EditLabel->setVisible(false);
@@ -126,16 +126,17 @@ void MainWindow::on_signOutButton_clicked()
         ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
-        ui->tabs->setCurrentIndex(3);
+        ui->tabs->setCurrentIndex(2);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
     if(currentUserAccessLevel == 1)
     {
         ui->tabs->removeTab(2);
+        ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
-        ui->tabs->setCurrentIndex(3);
+        ui->tabs->setCurrentIndex(2);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }
@@ -148,7 +149,6 @@ void MainWindow::on_signOutButton_clicked()
     ui->UNameEdit->clear();
     ui->pWordToggle->setChecked(false);
     ui->pWordToggle2->setChecked(false);
-
     ui->FNameEdit->clear();
     ui->companyEdit->clear();
     ui->streetEdit->clear();
@@ -159,7 +159,22 @@ void MainWindow::on_signOutButton_clicked()
     ui->PwordEdit->clear();
     ui->InterestEdit->setCurrentIndex(0);
 
-    username = "guest";
+    //clear line edits for account editing
+
+    ui->usernameEdit->clear();
+    ui->cityEdit2->clear();
+    ui->nameEdit2->clear();
+    ui->streetEdit2->clear();
+   // ui->stateEdit2->clear();
+    ui->zipcodeEdit2->clear();
+    //hide the edit account stuff
+    ui->EditAccountBox->setVisible(false);
+    ui->EditLabel->setVisible(false);
+    ui->saveButton->setVisible(false);
+    username = "Guest";
+    ui->levelBox->setCurrentIndex(0);
+    ui->platformBox->setCurrentIndex(0);
+    ui->quantityEdit->clear();
 }
 
 
@@ -299,7 +314,9 @@ void MainWindow::on_EditInfo_B_clicked()
     ui->cityEdit2->setText(db.retrieveCustomerCity(username));
     ui->nameEdit2->setText(db.retrieveCustomerName(username));
     ui->streetEdit2->setText(db.retrieveCustomerStreet(username));
-    ui->stateEdit2->setText(db.retrieveCustomerState(username));
+    ui->stateEdit_2->setCurrentText(db.retrieveCustomerState(username));
+
+    //ui->stateEdit2->setText(db.retrieveCustomerState(username));
     ui->zipcodeEdit2->setText(db.retrieveCustomerZip(username));
 
 }
@@ -308,12 +325,13 @@ void MainWindow::on_saveButton_clicked()
 {
 
     QString username1 = username;
-    QString username2 = ui->usernameEdit->text();
-    QString city      = ui->cityEdit2->text();
-    QString name      = ui->nameEdit2->text();
-    QString street    = ui->streetEdit2->text();
-    QString state     = ui->stateEdit2->text();
-    QString zip       = ui->zipcodeEdit2->text();
+    QString username2 = ui->usernameEdit->text().simplified();
+    QString city      = ui->cityEdit2->text().simplified();
+    QString name      = ui->nameEdit2->text().simplified();
+    QString street    = ui->streetEdit2->text().simplified();
+    QString state     = ui->stateEdit_2->currentText();
+    //QString state     = ui->stateEdit2->text().simplified();
+    QString zip       = ui->zipcodeEdit2->text().simplified();
 
 
     if(db.UpdateAdminInfo(username1, username2, name, street, state, city, zip))
@@ -562,16 +580,52 @@ void MainWindow::on_BuyButton_clicked()
     QString platform = ui->platformBox->currentText();
     QString level    = ui->levelBox->currentText();
     QString quantity = ui->quantityEdit->text();
-
-    if(db.BuyProducts(username, platform, level, quantity))
+    if(username != "Guest")
     {
-       QMessageBox::information(this, tr("Success"), "Successfully purchased products");
+        if(db.BuyProducts(username, platform, level, quantity))
+        {
+           QMessageBox::information(this, tr("Success"), "Successfully purchased products");
+        }
+        else
+        {
+            QMessageBox::information(this, tr("Unsuccessful"), "Order did not go through. Please try again");
+        }
     }
     else
     {
-        QMessageBox::information(this, tr("Unsuccessful"), "Order did not go through. Please try again");
+        QMessageBox::information(this, tr("You need to sign in!")
+    , "Please login or make an account to buy licenses");
     }
 
+    ui->levelBox->setCurrentIndex(0);
+    ui->platformBox->setCurrentIndex(0);
+    ui->quantityEdit->clear();
 
+
+}
+
+void MainWindow::on_lineEdit_2_returnPressed()
+{
+    QString username = ui->lineEdit->text().simplified();
+    QString pword = ui->lineEdit_2->text().simplified();
+
+    if(username.isEmpty() || pword.isEmpty())
+    {
+        QMessageBox::information(this, tr("Invalid!"),
+                                 "Please fill both fields");
+    }
+    else
+    {
+        try
+        {
+            Login(username, pword);
+        }catch(...)
+        {
+            //temp message
+            //this should change to be a label that displays on screen
+            QMessageBox::information(this, tr("Invalid!"),
+                                     "Invalid username or password, please try again.");
+        }
+    }
 
 }
