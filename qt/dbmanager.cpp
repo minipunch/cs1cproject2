@@ -403,3 +403,22 @@ bool dbManager::BuyProducts(QString username, QString platform, QString level, Q
 
     return successful;
 }
+
+bool dbManager::UpdateAdminInfo(QString username1, QString username2, QString name, QString street, QString state, QString city, QString zip)
+{
+    QSqlQuery query;
+    bool successful = false;
+
+    query.prepare("UPDATE users set username='" + username2 + "',name='" + name +"',street='" + street +
+                  "',state='" + state + "',city='" + city + "',zip='" + zip + "' WHERE username='" +
+                  username1 + "'");
+
+    if(query.exec())
+    {
+        qDebug() << "Updated Admin info";
+        successful = true;
+
+    }
+
+    return successful;
+}

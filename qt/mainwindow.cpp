@@ -294,17 +294,49 @@ void MainWindow::on_EditInfo_B_clicked()
     ui->EditAccountBox->setVisible(true);
     ui->EditLabel->setVisible(true);
     ui->saveButton->setVisible(true);
+
+    ui->usernameEdit->setText(username);
+    ui->cityEdit2->setText(db.retrieveCustomerCity(username));
+    ui->nameEdit2->setText(db.retrieveCustomerName(username));
+    ui->streetEdit2->setText(db.retrieveCustomerStreet(username));
+    ui->stateEdit2->setText(db.retrieveCustomerState(username));
+    ui->zipcodeEdit2->setText(db.retrieveCustomerZip(username));
+
 }
 
 void MainWindow::on_saveButton_clicked()
 {
+
+    QString username1 = username;
+    QString username2 = ui->usernameEdit->text();
+    QString city      = ui->cityEdit2->text();
+    QString name      = ui->nameEdit2->text();
+    QString street    = ui->streetEdit2->text();
+    QString state     = ui->stateEdit2->text();
+    QString zip       = ui->zipcodeEdit2->text();
+
+
+    if(db.UpdateAdminInfo(username1, username2, name, street, state, city, zip))
+    {
+        username = username2;
+       QMessageBox::information(this, tr("Success"), "Successfully Updated Information");
+    }
+    else
+    {
+        QMessageBox::information(this, tr("Unsuccessful"), "Information Not Updated. Please try again");
+    }
+
+    ui->usernameLabel->setText(username);
+    ui->nameLabel->setText(name);
+    ui->companyLabel->setText(db.retrieveCustomerCompany(username));
+    ui->streetLabel->setText(street);
+    ui->cityLabel->setText(city);
+    ui->stateLabel->setText(state);
+    ui->zipLabel->setText(zip);
+
     ui->EditAccountBox->setVisible(false);
     ui->EditLabel->setVisible(false);
     ui->saveButton->setVisible(false);
-
-
-
-
 
 }
 

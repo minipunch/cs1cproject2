@@ -28,6 +28,7 @@ public:
     QString retrieveCustomerInterest(QString username);
     QVector<QString> getUserNames(int parameter);
     bool BuyProducts(QString username, QString platform, QString level, QString quantity);
+    bool UpdateAdminInfo(QString username1, QString username2, QString name, QString street, QString state, QString city, QString zip);
 
 private:
     QSqlDatabase db;
