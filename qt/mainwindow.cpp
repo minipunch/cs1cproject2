@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tabs->removeTab(3);
 
     //Inserting Picture
-    QPixmap burglar("M:/Pictures/Saved Pictures/sneaker.png");
+    QPixmap burglar(":/images/sneaker.png");
     ui->picturelabel->setPixmap(burglar);
 
 
