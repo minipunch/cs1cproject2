@@ -132,8 +132,8 @@
      <widget class="QLabel" name="picturelabel">
       <property name="geometry">
        <rect>
-        <x>780</x>
-        <y>330</y>
+        <x>730</x>
+        <y>290</y>
         <width>271</width>
         <height>191</height>
        </rect>
