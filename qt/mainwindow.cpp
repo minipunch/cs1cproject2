@@ -185,7 +185,6 @@ void MainWindow::on_signOutButton_clicked()
     username = "Guest";
     ui->levelBox->setCurrentIndex(0);
     ui->platformBox->setCurrentIndex(0);
-    ui->quantityEdit->clear();
 }
 
 
@@ -609,7 +608,6 @@ void MainWindow::on_BuyButton_clicked()
 
     ui->levelBox->setCurrentIndex(0);
     ui->platformBox->setCurrentIndex(0);
-    ui->quantityEdit->clear();
 }
 
 void MainWindow::on_lineEdit_2_returnPressed()

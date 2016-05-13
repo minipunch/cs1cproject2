@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -246,17 +246,17 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <layout class="QGridLayout" name="productsLayout">
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Quantity:</string>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
-        <widget class="QSpinBox" name="spinBox"/>
-       </item>
-       <item row="0" column="5">
+       <item row="0" column="4">
         <widget class="QPushButton" name="BuyButton">
          <property name="text">
           <string>Buy</string>
@@ -287,6 +287,22 @@ p, li { white-space: pre-wrap; }
          </item>
         </widget>
        </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_4">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Licenses:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="0">
         <widget class="QComboBox" name="platformBox">
          <item>
@@ -305,9 +321,6 @@ p, li { white-space: pre-wrap; }
           </property>
          </item>
         </widget>
-       </item>
-       <item row="0" column="4">
-        <widget class="QLineEdit" name="quantityEdit"/>
        </item>
       </layout>
      </widget>
@@ -1833,7 +1846,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>textBrowser_2</tabstop>
   <tabstop>textBrowser_3</tabstop>
   <tabstop>textBrowser_4</tabstop>
-  <tabstop>quantityEdit</tabstop>
   <tabstop>BuyButton</tabstop>
   <tabstop>levelBox</tabstop>
   <tabstop>pushButton</tabstop>

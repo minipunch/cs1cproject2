@@ -28,5 +28,5 @@
 *.app
 
 # QT Shizznit
-
+build-CyberSecurity-Desktop_Qt_5_4_2_MinGW_32bit2-Debug/
 *.user
