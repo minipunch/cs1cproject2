@@ -148,6 +148,9 @@ public:
      */
     bool UpdateInfo(QString username1, QString username2, QString name, QString street, QString state, QString city, QString zip);
 
+    QString retrieveCustomerProtection(QString username);
+    QString retrieveCustomerLicenses(QString username);
+
 private:
     QSqlDatabase db; //the database
 };

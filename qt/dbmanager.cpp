@@ -341,6 +341,42 @@ QString dbManager::retrieveCustomerInterest(QString username)
     return "NO.CUSTOMER.INTEREST.FOUND";
 }
 
+QString dbManager::retrieveCustomerProtection(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT protectionlvl FROM users WHERE username = (:username)");
+    query.bindValue(":username",username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString protectionLevel = query.value(0).toString();
+            return protectionLevel;
+        }
+    }
+
+    return "NO.CUSTOMER.PROTECTIONLEVEL.FOUND";
+}
+
+QString dbManager::retrieveCustomerLicenses(QString username)
+{
+    QSqlQuery query;
+    query.prepare("SELECT licenses FROM users WHERE username = (:username)");
+    query.bindValue(":username",username);
+
+    if(query.exec())
+    {
+        if(query.next())
+        {
+            QString licenses = query.value(0).toString();
+            return licenses;
+        }
+    }
+
+    return "NO.CUSTOMER.LICENSES.FOUND";
+}
+
 
 QVector<QString> dbManager::getUserNames(int parameter)
 {
@@ -398,8 +434,11 @@ bool dbManager::BuyProducts(QString username, QString platform, QString level, Q
     QSqlQuery query;
     bool successful = false;
 
-    query.prepare("UPDATE users set protectionlvl='" + level + "',licenses='" + quantity +
-                  "',platform='" + platform + "' where username='" + username + "'");
+    query.prepare("UPDATE users SET protectionlvl = (:level), licenses = (:licenses), platform = (:platform) WHERE username = (:username)");
+    query.bindValue(":level", level);
+    query.bindValue(":licenses", quantity);
+    query.bindValue(":platform", platform);
+    query.bindValue(":username", username);
 
     if(query.exec())
     {
@@ -416,9 +455,14 @@ bool dbManager::UpdateInfo(QString username1, QString username2, QString name, Q
     QSqlQuery query;
     bool successful = false;
 
-    query.prepare("UPDATE users set username='" + username2 + "',name='" + name +"',street='" + street +
-                  "',state='" + state + "',city='" + city + "',zip='" + zip + "' WHERE username='" +
-                  username1 + "'");
+    query.prepare("UPDATE users SET username = (:username2), name = (:name), street = (:street), state = (:state), city = (:city), zip = (:zip) WHERE username = (:username1)");
+    query.bindValue(":username2", username2);
+    query.bindValue(":name", name);
+    query.bindValue(":street", street);
+    query.bindValue(":state", state);
+    query.bindValue(":city", city);
+    query.bindValue(":zip", zip);
+    query.bindValue(":username1", username1);
 
     if(query.exec())
     {

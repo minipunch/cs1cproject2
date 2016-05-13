@@ -77,6 +77,8 @@ private slots:
 
     void on_lineEdit_2_returnPressed();
 
+    void on_actionExit_triggered();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;   //list of users

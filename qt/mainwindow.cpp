@@ -67,6 +67,8 @@ void MainWindow::setCustomerLabelInfo(QString customerUsername)
     ui->cityLabel->setText(db.retrieveCustomerCity(customerUsername));
     ui->stateLabel->setText(db.retrieveCustomerState(customerUsername));
     ui->zipLabel->setText(db.retrieveCustomerZip(customerUsername));
+    ui->productLabel->setText(db.retrieveCustomerProtection(customerUsername));
+    ui->licensesLabel->setText(db.retrieveCustomerLicenses(customerUsername));
 }
 
 void MainWindow::setCustomerLoginTabs(int customerAccessLevel)
@@ -605,8 +607,6 @@ void MainWindow::on_BuyButton_clicked()
     ui->levelBox->setCurrentIndex(0);
     ui->platformBox->setCurrentIndex(0);
     ui->quantityEdit->clear();
-
-
 }
 
 void MainWindow::on_lineEdit_2_returnPressed()
@@ -633,4 +633,9 @@ void MainWindow::on_lineEdit_2_returnPressed()
         }
     }
 
+}
+
+void MainWindow::on_actionExit_triggered()
+{
+    this->close();
 }
