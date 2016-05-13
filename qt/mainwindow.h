@@ -79,6 +79,8 @@ private slots:
 
     void on_actionExit_triggered();
 
+    void on_tabs_currentChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     dbManager db;   //list of users

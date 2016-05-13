@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1216</width>
-    <height>754</height>
+    <height>741</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,12 +41,12 @@
      <rect>
       <x>80</x>
       <y>140</y>
-      <width>1071</width>
-      <height>561</height>
+      <width>1081</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -246,15 +246,22 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <layout class="QGridLayout" name="productsLayout">
-       <item row="0" column="4">
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Quantity:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="spinBox"/>
+       </item>
+       <item row="0" column="5">
         <widget class="QPushButton" name="BuyButton">
          <property name="text">
           <string>Buy</string>
          </property>
         </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QLineEdit" name="quantityEdit"/>
        </item>
        <item row="0" column="1">
         <widget class="QComboBox" name="levelBox">
@@ -299,12 +306,8 @@ p, li { white-space: pre-wrap; }
          </item>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Quantity:</string>
-         </property>
-        </widget>
+       <item row="0" column="4">
+        <widget class="QLineEdit" name="quantityEdit"/>
        </item>
       </layout>
      </widget>
@@ -1809,6 +1812,49 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>pWordToggle2</tabstop>
+  <tabstop>signInButton</tabstop>
+  <tabstop>FNameEdit</tabstop>
+  <tabstop>companyEdit</tabstop>
+  <tabstop>streetEdit</tabstop>
+  <tabstop>cityEdit</tabstop>
+  <tabstop>stateEdit</tabstop>
+  <tabstop>zipEdit</tabstop>
+  <tabstop>InterestEdit</tabstop>
+  <tabstop>UNameEdit</tabstop>
+  <tabstop>PwordEdit</tabstop>
+  <tabstop>pWordToggle</tabstop>
+  <tabstop>CreatAcct</tabstop>
+  <tabstop>platformBox</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>textBrowser_2</tabstop>
+  <tabstop>textBrowser_3</tabstop>
+  <tabstop>textBrowser_4</tabstop>
+  <tabstop>quantityEdit</tabstop>
+  <tabstop>BuyButton</tabstop>
+  <tabstop>levelBox</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>tabs</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>signOutButton</tabstop>
+  <tabstop>EditInfo_B</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>usernameEdit</tabstop>
+  <tabstop>cityEdit2</tabstop>
+  <tabstop>streetEdit2</tabstop>
+  <tabstop>nameEdit2</tabstop>
+  <tabstop>zipcodeEdit2</tabstop>
+  <tabstop>stateEdit_2</tabstop>
+  <tabstop>CustomersTable</tabstop>
+  <tabstop>keyCustomersButton</tabstop>
+  <tabstop>customersButton</tabstop>
+  <tabstop>adminButton</tabstop>
+  <tabstop>upgradeButton</tabstop>
+ </tabstops>
  <resources>
   <include location="resource.qrc"/>
  </resources>

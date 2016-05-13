@@ -33,6 +33,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->EditLabel->setVisible(false);
     ui->saveButton->setVisible(false);
 
+    ui->Indicator->setText("Guest");
+
 }
 
 MainWindow::~MainWindow()
@@ -60,7 +62,8 @@ void MainWindow::setCustomerLabelInfo(QString customerUsername)
 {
     // set label info
     ui->nameLabel->setText(db.retrieveCustomerName(customerUsername));
-    ui->Indicator->setText(db.retrieveCustomerName(customerUsername));
+    if(this->isUserLoggedIn)
+        ui->Indicator->setText(db.retrieveCustomerName(customerUsername));
     ui->usernameLabel->setText(db.retrieveCustomerUsername(customerUsername));
     ui->companyLabel->setText(db.retrieveCustomerCompany(customerUsername));
     ui->streetLabel->setText(db.retrieveCustomerStreet(customerUsername));
@@ -586,7 +589,7 @@ void MainWindow::on_BuyButton_clicked()
 {
     QString platform = ui->platformBox->currentText();
     QString level    = ui->levelBox->currentText();
-    QString quantity = ui->quantityEdit->text();
+    QString quantity = ui->spinBox->text();
     if(username != "Guest")
     {
         if(db.BuyProducts(username, platform, level, quantity))
@@ -638,4 +641,15 @@ void MainWindow::on_lineEdit_2_returnPressed()
 void MainWindow::on_actionExit_triggered()
 {
     this->close();
+}
+
+// dynamically update My Account tab with any new information when clicked
+void MainWindow::on_tabs_currentChanged(int index)
+{
+    // if user clicks on My Account tab ...
+    if(index == 2)
+    {
+        // ... update the user label info
+        setCustomerLabelInfo(this->username);
+    }
 }
