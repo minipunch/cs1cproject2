@@ -3,6 +3,12 @@
 #include "dbmanager.h"
 
 #include<QMessageBox>
+/*!
+   * \file mainwindow.cpp
+   * \brief  mainwindow source file
+   *
+   * This file contains the mainwindow definitions and implementations
+   */
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -165,7 +171,7 @@ void MainWindow::on_signOutButton_clicked()
     ui->cityEdit2->clear();
     ui->nameEdit2->clear();
     ui->streetEdit2->clear();
-   // ui->stateEdit2->clear();
+    // ui->stateEdit2->clear();
     ui->zipcodeEdit2->clear();
     //hide the edit account stuff
     ui->EditAccountBox->setVisible(false);
@@ -195,7 +201,7 @@ void MainWindow::on_CreatAcct_clicked()
     interest = ui->InterestEdit->currentText();
 
     if(name.isEmpty() || uName.isEmpty() || pWord.isEmpty() || company.isEmpty() || street.isEmpty() ||
-       city.isEmpty() || zipTemp.isEmpty())
+            city.isEmpty() || zipTemp.isEmpty())
     {
         QMessageBox::information(this, tr("Invalid!"),
                                  "Please fill all fields.");
@@ -294,14 +300,14 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_actionPolicy_2_triggered()
 {
     QMessageBox::information(this, tr("Guarantee Policy")
-, "We guarantee that you will be satisfied because satisfaction is our guarantee.");
+                             , "We guarantee that you will be satisfied because satisfaction is our guarantee.");
 }
 
 void MainWindow::on_actionHelp_triggered()
 {
     QMessageBox::information(this, tr("Contact Us")
-, "If you have any complaints or feedback, you may contact us through the number (555)666-7777\nOr you may mail it instead to our P.O. Box at\n"
-    "555 Suck It Blvd. Home of the Bald Eagles 66666, India");
+                             , "If you have any complaints or feedback, you may contact us through the number (555)666-7777\nOr you may mail it instead to our P.O. Box at\n"
+                               "555 Suck It Blvd. Home of the Bald Eagles 66666, India");
 }
 
 void MainWindow::on_EditInfo_B_clicked()
@@ -330,14 +336,13 @@ void MainWindow::on_saveButton_clicked()
     QString name      = ui->nameEdit2->text().simplified();
     QString street    = ui->streetEdit2->text().simplified();
     QString state     = ui->stateEdit_2->currentText();
-    //QString state     = ui->stateEdit2->text().simplified();
     QString zip       = ui->zipcodeEdit2->text().simplified();
 
 
-    if(db.UpdateAdminInfo(username1, username2, name, street, state, city, zip))
+    if(db.UpdateInfo(username1, username2, name, street, state, city, zip))
     {
         username = username2;
-       QMessageBox::information(this, tr("Success"), "Successfully Updated Information");
+        QMessageBox::information(this, tr("Success"), "Successfully Updated Information");
     }
     else
     {
@@ -584,7 +589,7 @@ void MainWindow::on_BuyButton_clicked()
     {
         if(db.BuyProducts(username, platform, level, quantity))
         {
-           QMessageBox::information(this, tr("Success"), "Successfully purchased products");
+            QMessageBox::information(this, tr("Success"), "Successfully purchased products");
         }
         else
         {
@@ -594,7 +599,7 @@ void MainWindow::on_BuyButton_clicked()
     else
     {
         QMessageBox::information(this, tr("You need to sign in!")
-    , "Please login or make an account to buy licenses");
+                                 , "Please login or make an account to buy licenses");
     }
 
     ui->levelBox->setCurrentIndex(0);

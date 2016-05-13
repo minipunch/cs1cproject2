@@ -3,18 +3,37 @@
 
 #include <QMainWindow>
 #include "dbmanager.h"
-
+/*!
+   * \file mainwindow.h
+   * \brief  Header for mainwindow class(see class page for more details)
+   *
+   */
 namespace Ui {
 class MainWindow;
 }
-
+/*!
+ * \brief The MainWindow class
+ *
+ * This contains all of the implementations for the event driven parts of the project.
+ *
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /*!
+     * \brief Constructor
+     * \param parent
+     */
     explicit MainWindow(QWidget *parent = 0);
+    /*!
+     * \brief Destructor
+     */
     ~MainWindow();
+    /*!
+     * \brief Clears the admin table
+     */
     void ClearTable();
 
 
@@ -60,13 +79,13 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    dbManager db;
-    bool isUserLoggedIn;
-    int currentUserAccessLevel;
-    void Login(const QString& username, const QString& pword);//
-    void setCustomerLabelInfo(QString customerUsername);
-    void setCustomerLoginTabs(int customerAccessLevel);
-    QString username;
+    dbManager db;   //list of users
+    bool isUserLoggedIn; //whether or not someone is logged in
+    int currentUserAccessLevel; //current user's access level
+    void Login(const QString& username, const QString& pword);//checks the database to see if a user's inputted data is found
+    void setCustomerLabelInfo(QString customerUsername); //sets the labels for the "My Account" tab once logged in
+    void setCustomerLoginTabs(int customerAccessLevel); //sets tabs based on login
+    QString username; //username of current user logged in
 };
 
 #endif // MAINWINDOW_H

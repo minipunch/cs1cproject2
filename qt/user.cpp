@@ -1,4 +1,11 @@
 #include "user.h"
+
+/*!
+   * \file user.cpp
+   * \brief  Source file for user class methods
+   *
+   * This file contains all of the definitions of the user class
+   */
 /*
  * Constructors and destructors
  *

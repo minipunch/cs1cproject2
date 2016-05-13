@@ -1,5 +1,12 @@
 #include "dbmanager.h"
 
+/*!
+   * \file dbmanager.cpp
+   * \brief  Source file for dbmanager database wrapper class methods
+   *
+   * This file contains all of the definitions of the dbmanager database wrapper class
+   */
+
 dbManager::dbManager()
 {
     db = QSqlDatabase::addDatabase("QSQLITE");
@@ -404,7 +411,7 @@ bool dbManager::BuyProducts(QString username, QString platform, QString level, Q
     return successful;
 }
 
-bool dbManager::UpdateAdminInfo(QString username1, QString username2, QString name, QString street, QString state, QString city, QString zip)
+bool dbManager::UpdateInfo(QString username1, QString username2, QString name, QString street, QString state, QString city, QString zip)
 {
     QSqlQuery query;
     bool successful = false;
