@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -179,8 +179,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>11</x>
-        <y>12</y>
+        <x>20</x>
+        <y>50</y>
         <width>1031</width>
         <height>411</height>
        </rect>
@@ -192,9 +192,16 @@
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt;&quot;&gt;Platinum&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶V̶&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;Platnium&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfd-817a-3081-3c0dc168ee0a&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;et Everything mentioned from Gold Package.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;Gives you some type of life-endangering insurance, except Health(you can get that from Obamacare, you filthy pleb).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-2acb-1a4c-d4d1bf9f09f2&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;as emergency button to delete your Internet Browsing and File Explorer history INSTANTLY.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-4a33-066a-e94dad4ed988&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ctually have any installed updates help protect your computer.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-5e95-776d-3487299cdd46&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;llowed to have access to download more RAM (&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:696; color:#000000; background-color:transparent;&quot;&gt;exclusive&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt; freebie!).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-74aa-e369-98455b8a3696&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;9.9% Customer Satisfaction (That .1% is for your mom).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -208,7 +215,15 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Comic Sans MS'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt;&quot;&gt;Gold&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶I̶I̶&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; text-decoration: underline;&quot;&gt;Gold&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfa-df96-d334-26e76e1b5dbd&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;et everything mentioned in Bronze Package.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-0375-3aaa-b89341914d46&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;R&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;eal time protection: we’ll exclusively send one of us to protect you, equipped with a rubber band and a slingshot. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-53ee-314f-96859418b6a4&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;S&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ecures every device that you own, including microwaves, ovens, and hair-dryers.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-64bd-8b9e-f242094ac486&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;llowed to install updates onto program and have access to examples on how those updates help you protect yourself from threats.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-77ed-fadf-93f53fd64a15&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ill contain parental controls to help manage whatever your satanic spawns are browsing on the dark side of &amp;quot;4chan&amp;quot;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-c484-7880-01f493afff97&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; color:#000000; background-color:transparent;&quot;&gt;6&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; color:#000000; background-color:transparent;&quot;&gt;9%&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt; Customer Guarantee and Satisfaction.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -218,8 +233,14 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt;&quot;&gt;Bronze&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶&lt;br /&gt;Bronze&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;Tier&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf2-4328-8f6a-a78c886d9c97&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;elps protect device from viruses through the firewall reinforcement.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf2-6d55-ef21-9de78c450bd1&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;E&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;nsures user that they can wander through their computer seamlessly without stress and worry.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf2-b40e-d82c-b778aee10829&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ill have on-the-phone help on “accessing” your credit card and help “prevent” online frauds. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf3-5a5c-5612-fbca0e8479b7&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;M&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ight help you when you need it online.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf3-9a44-4744-153c969b63c4&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;D&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;enied option to update to latest version because you need to &lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;Get Good&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -229,8 +250,15 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt;&quot;&gt;Silver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶I̶&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;Silver&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf8-bff1-3734-abef3249e1e7&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;E&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;verything mentioned from Bronze Package.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf8-1f60-5e37-56b7e9668d10&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;elps protect against Online threats, so you can browse whatever you want, whenever you want (Ad-block is a minimum requirement to be eligible for the Service Package 2).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf8-55ba-b672-66c486f2694d&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;llowed to browse the Update Notes and download updates for the Anti-Cyber Security Program.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf8-7571-fb63-593a997815de&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ill retract any harm done by us from the third to last statement from previous service package. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf8-9f07-6f92-fdc5dd07578f&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;0%&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt; Customer Guarantee and Satisfaction.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -239,10 +267,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>430</y>
-        <width>571</width>
-        <height>81</height>
+        <x>510</x>
+        <y>460</y>
+        <width>511</width>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="productsLayout">
@@ -323,6 +351,29 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QLabel" name="Trump4life">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>1021</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>17</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>All Service Packages will automatically enlist you into the #Trump2016 Support Group!</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="myAccount">
@@ -1992,7 +2043,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1216</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
