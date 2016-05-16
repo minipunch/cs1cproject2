@@ -147,9 +147,16 @@ public:
      * \return result of the update(pass or fail)
      */
     bool UpdateInfo(QString username1, QString username2, QString name, QString street, QString state, QString city, QString zip);
-
-    QString retrieveCustomerProtection(QString username);
-    QString retrieveCustomerLicenses(QString username);
+    /*!
+     * \brief Admin update for users
+     *
+     * This method allows the user to update a users key and interest levels from the table
+     * \param username User being updated
+     * \param interest New interest level
+     * \param isKey   New Key level
+     * \return success of operation
+     */
+    bool Update2(QString username, QString interest, QString isKey);
 
 private:
     QSqlDatabase db; //the database

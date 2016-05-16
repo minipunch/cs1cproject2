@@ -107,7 +107,7 @@ QString dbManager::retrieveCustomerName(QString username)
     QSqlQuery query;
     query.prepare("SELECT name FROM users WHERE username = (:username)");
     query.bindValue(":username", username);
-
+    qDebug() << username;
     if(query.exec())
     {
         if(query.next())
@@ -341,41 +341,7 @@ QString dbManager::retrieveCustomerInterest(QString username)
     return "NO.CUSTOMER.INTEREST.FOUND";
 }
 
-QString dbManager::retrieveCustomerProtection(QString username)
-{
-    QSqlQuery query;
-    query.prepare("SELECT protectionlvl FROM users WHERE username = (:username)");
-    query.bindValue(":username",username);
 
-    if(query.exec())
-    {
-        if(query.next())
-        {
-            QString protectionLevel = query.value(0).toString();
-            return protectionLevel;
-        }
-    }
-
-    return "NO.CUSTOMER.PROTECTIONLEVEL.FOUND";
-}
-
-QString dbManager::retrieveCustomerLicenses(QString username)
-{
-    QSqlQuery query;
-    query.prepare("SELECT licenses FROM users WHERE username = (:username)");
-    query.bindValue(":username",username);
-
-    if(query.exec())
-    {
-        if(query.next())
-        {
-            QString licenses = query.value(0).toString();
-            return licenses;
-        }
-    }
-
-    return "NO.CUSTOMER.LICENSES.FOUND";
-}
 
 
 QVector<QString> dbManager::getUserNames(int parameter)
@@ -471,5 +437,24 @@ bool dbManager::UpdateInfo(QString username1, QString username2, QString name, Q
 
     }
 
+    return successful;
+}
+bool dbManager::Update2(QString username, QString interest, QString isKey)
+{
+    QSqlQuery query;
+    bool successful = false;
+    bool key = false;
+    if(isKey == "Yes")
+    {
+        key = true;
+    }
+    query.prepare("UPDATE users SET interestLvl = (:interest), key = (:key) WHERE username = (:username)");
+    query.bindValue(":interest", interest);
+    query.bindValue(":key", key);
+     query.bindValue(":username", username);
+    if(query.exec())
+    {   qDebug() << "Worked" << endl;
+        successful = true;
+    }
     return successful;
 }

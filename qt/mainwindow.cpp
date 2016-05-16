@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->EditAccountBox->setVisible(false);
     ui->EditLabel->setVisible(false);
     ui->saveButton->setVisible(false);
-
+    ui->Indicator->setAlignment(Qt::AlignRight);
     ui->Indicator->setText("Guest");
 
 }
@@ -70,8 +70,8 @@ void MainWindow::setCustomerLabelInfo(QString customerUsername)
     ui->cityLabel->setText(db.retrieveCustomerCity(customerUsername));
     ui->stateLabel->setText(db.retrieveCustomerState(customerUsername));
     ui->zipLabel->setText(db.retrieveCustomerZip(customerUsername));
-    ui->productLabel->setText(db.retrieveCustomerProtection(customerUsername));
-    ui->licensesLabel->setText(db.retrieveCustomerLicenses(customerUsername));
+    ui->productLabel->setText(db.retrieveCustomerLevel(customerUsername));
+    ui->licensesLabel->setText(db.retrieveCustomerLiscenses(customerUsername));
 }
 
 void MainWindow::setCustomerLoginTabs(int customerAccessLevel)
@@ -131,6 +131,7 @@ void MainWindow::on_signInButton_clicked()
 
 void MainWindow::on_signOutButton_clicked()
 {
+    ui->Indicator->setAlignment(Qt::AlignRight);
     if(currentUserAccessLevel == 2)
     {
         ui->tabs->removeTab(2);
@@ -288,6 +289,7 @@ void MainWindow::Login(const QString& username, const QString& pword)
         setCustomerLabelInfo(username);
         this->username = username;
     }
+    ui->Indicator->setAlignment(Qt::AlignRight);
 
 }
 
@@ -457,6 +459,7 @@ void MainWindow::on_pushButton_3_clicked()
 void MainWindow::on_signOutButton_2_clicked()
 {
     ui->EditLabel->setVisible(true);
+
 }
 
 
@@ -470,9 +473,7 @@ void MainWindow::on_customersButton_clicked()
     ui->CustomersTable->horizontalHeader()->setVisible(true);
 
     /* Sets the columns of the of table for Registered customers*/
-    ui->CustomersTable->insertColumn(col);
-    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Company"));
-    col++;
+
 
     ui->CustomersTable->insertColumn(col);
     ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Name"));
@@ -480,6 +481,10 @@ void MainWindow::on_customersButton_clicked()
 
     ui->CustomersTable->insertColumn(col);
     ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Username"));
+    col++;
+
+    ui->CustomersTable->insertColumn(col);
+    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Company"));
     col++;
 
     ui->CustomersTable->insertColumn(col);
@@ -518,9 +523,9 @@ void MainWindow::on_customersButton_clicked()
         QString username = list.at(i);
 
         ui->CustomersTable->insertRow(row);
-        ui->CustomersTable->setItem(row, 0, new QTableWidgetItem(db.retrieveCustomerCompany(username)));
-        ui->CustomersTable->setItem(row, 1, new QTableWidgetItem(db.retrieveCustomerName(username)));
-        ui->CustomersTable->setItem(row, 2, new QTableWidgetItem(username));
+        ui->CustomersTable->setItem(row, 2, new QTableWidgetItem(db.retrieveCustomerCompany(username)));
+        ui->CustomersTable->setItem(row, 0, new QTableWidgetItem(db.retrieveCustomerName(username)));
+        ui->CustomersTable->setItem(row, 1, new QTableWidgetItem(username));
         ui->CustomersTable->setItem(row, 3, new QTableWidgetItem(db.retrieveCustomerZip(username)));
         ui->CustomersTable->setItem(row, 4, new QTableWidgetItem(db.retrieveCustomerLevel(username)));
         ui->CustomersTable->setItem(row, 5, new QTableWidgetItem(db.retrieveCustomerLiscenses(username)));
@@ -651,3 +656,61 @@ void MainWindow::on_tabs_currentChanged(int index)
         setCustomerLabelInfo(this->username);
     }
 }
+
+
+
+
+
+void MainWindow::on_CustomersTable_cellClicked(int row, int column)
+{
+
+    if(column == 1)
+    {
+        QString user = ui->CustomersTable->item(row, column)->text();
+
+        ui->nameview->setText(db.retrieveCustomerUsername(user));
+        ui->Compview->setText(db.retrieveCustomerCompany(user));
+        ui->Address->setText(db.retrieveCustomerStreet(user) + ", " + db.retrieveCustomerCity(user) + ", " + db.retrieveCustomerZip(user) + ", " + db.retrieveCustomerState(user));
+        ui->interestedit->setCurrentText(db.retrieveCustomerInterest(user));
+        ui->Keyedit->setCurrentText(db.retrieveCustomerKey(user));
+    }
+    else
+    {
+        ui->nameview->setText("Nothing Selected");
+        ui->Compview->setText("Nothing Selected");
+        ui->Address->setText("Nothing Selected");
+        ui->interestedit->setCurrentIndex(0);
+        ui->Keyedit->setCurrentIndex(0);
+    }
+
+
+
+
+}
+
+void MainWindow::on_Update_clicked()
+{
+    QString toEdit = ui->nameview->text();
+    QString Interest = ui->interestedit->currentText();
+    QString key =  ui->Keyedit->currentText();
+    if(toEdit != "Nothing Selected")
+    {
+        if(db.Update2(toEdit, Interest, key))
+        {
+            QMessageBox::information(this, tr("Done"),
+                                     "User updated");
+        }
+        else
+        {
+            QMessageBox::information(this, tr("Crap!"),
+                                     "Update didn't work");
+        }
+    }
+    else
+    {
+        QMessageBox::information(this, tr("Invalid!"),
+                                 "Select a user");
+    }
+}
+
+

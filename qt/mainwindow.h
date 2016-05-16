@@ -81,6 +81,12 @@ private slots:
 
     void on_tabs_currentChanged(int index);
 
+
+
+    void on_CustomersTable_cellClicked(int row, int column);
+
+    void on_Update_clicked();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;   //list of users
@@ -89,7 +95,10 @@ private:
     void Login(const QString& username, const QString& pword);//checks the database to see if a user's inputted data is found
     void setCustomerLabelInfo(QString customerUsername); //sets the labels for the "My Account" tab once logged in
     void setCustomerLoginTabs(int customerAccessLevel); //sets tabs based on login
+
     QString username; //username of current user logged in
+
+
 };
 
 #endif // MAINWINDOW_H
