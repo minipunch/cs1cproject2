@@ -380,9 +380,6 @@ void MainWindow::on_keyCustomersButton_clicked()
     ui->CustomersTable->horizontalHeader()->setVisible(true);
 
     /* Sets the columns of the of table for Registered customers*/
-    ui->CustomersTable->insertColumn(col);
-    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Company"));
-    col++;
 
     ui->CustomersTable->insertColumn(col);
     ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Name"));
@@ -390,6 +387,9 @@ void MainWindow::on_keyCustomersButton_clicked()
 
     ui->CustomersTable->insertColumn(col);
     ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Username"));
+    col++;
+    ui->CustomersTable->insertColumn(col);
+    ui->CustomersTable->setHorizontalHeaderItem(col, new QTableWidgetItem("Company"));
     col++;
 
     ui->CustomersTable->insertColumn(col);
@@ -424,9 +424,9 @@ void MainWindow::on_keyCustomersButton_clicked()
         QString username = list.at(i);
 
         ui->CustomersTable->insertRow(row);
-        ui->CustomersTable->setItem(row, 0, new QTableWidgetItem(db.retrieveCustomerCompany(username)));
-        ui->CustomersTable->setItem(row, 1, new QTableWidgetItem(db.retrieveCustomerName(username)));
-        ui->CustomersTable->setItem(row, 2, new QTableWidgetItem(username));
+        ui->CustomersTable->setItem(row, 2, new QTableWidgetItem(db.retrieveCustomerCompany(username)));
+        ui->CustomersTable->setItem(row, 0, new QTableWidgetItem(db.retrieveCustomerName(username)));
+        ui->CustomersTable->setItem(row, 1, new QTableWidgetItem(username));
         ui->CustomersTable->setItem(row, 3, new QTableWidgetItem(db.retrieveCustomerZip(username)));
         ui->CustomersTable->setItem(row, 4, new QTableWidgetItem(db.retrieveCustomerLevel(username)));
         ui->CustomersTable->setItem(row, 5, new QTableWidgetItem(db.retrieveCustomerLiscenses(username)));
