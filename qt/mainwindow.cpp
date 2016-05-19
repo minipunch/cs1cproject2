@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     isUserLoggedIn = false;
 
-    ui->tabs->removeTab(5);
+  //  ui->tabs->removeTab(5);
     // remove admin panel tab
     ui->tabs->removeTab(4);
     // remove account info tab
@@ -56,6 +56,11 @@ void MainWindow::ClearTable()
     {
         ui->CustomersTable->removeColumn(0);
     }
+    ui->nameview->setText("Nothing Selected");
+    ui->Compview->setText("Nothing Selected");
+    ui->Address->setText("Nothing Selected");
+    ui->interestedit->setCurrentIndex(0);
+    ui->Keyedit->setCurrentIndex(0);
 }
 
 void MainWindow::setCustomerLabelInfo(QString customerUsername)
@@ -84,7 +89,7 @@ void MainWindow::setCustomerLoginTabs(int customerAccessLevel)
         ui->tabs->addTab(ui->AccountInfoTab, "My Account");
         // set as active tab
         ui->tabs->setCurrentIndex(2);
-        ui->tabs->addTab(ui->customerTab, "Customer");
+        //ui->tabs->addTab(ui->customerTab, "Customer");
     }
     else if(customerAccessLevel == 2)
     {
@@ -128,7 +133,7 @@ void MainWindow::on_signInButton_clicked()
 
 
 }
-
+//user signs out and program is reset to guest mode
 void MainWindow::on_signOutButton_clicked()
 {
     ui->Indicator->setAlignment(Qt::AlignRight);
@@ -141,6 +146,7 @@ void MainWindow::on_signOutButton_clicked()
         ui->tabs->setCurrentIndex(2);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
+        ClearTable();
     }
     if(currentUserAccessLevel == 1)
     {
@@ -714,3 +720,30 @@ void MainWindow::on_Update_clicked()
 }
 
 
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    QString toRemove = ui->nameview->text();
+    if(toRemove != "Nothing Selected")
+    {
+        if(db.RemoveAccount(toRemove))
+        {
+            QMessageBox::information(this, tr("Done"),
+                                     "User removed");
+            ui->nameview->setText("Nothing Selected");
+            ui->Compview->setText("Nothing Selected");
+            ui->Address->setText("Nothing Selected");
+        }
+        else
+        {
+            QMessageBox::information(this, tr("Crap!"),
+                                     "Remove didn't work");
+        }
+    }
+    else
+    {
+        QMessageBox::information(this, tr("Invalid!"),
+                                 "Select a user");
+    }
+
+}

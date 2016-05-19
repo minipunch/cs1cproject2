@@ -439,6 +439,7 @@ bool dbManager::UpdateInfo(QString username1, QString username2, QString name, Q
 
     return successful;
 }
+
 bool dbManager::Update2(QString username, QString interest, QString isKey)
 {
     QSqlQuery query;
@@ -457,4 +458,16 @@ bool dbManager::Update2(QString username, QString interest, QString isKey)
         successful = true;
     }
     return successful;
+}
+bool dbManager::RemoveAccount(QString username)
+{
+    QSqlQuery query;
+    bool successful = false;
+    query.prepare("DELETE FROM users WHERE username = (:username)");
+   query.bindValue(":username", username);
+   if(query.exec())
+   {
+       successful = true;
+   }
+   return successful;
 }

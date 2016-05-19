@@ -157,6 +157,12 @@ public:
      * \return success of operation
      */
     bool Update2(QString username, QString interest, QString isKey);
+    /*!
+     * \brief Removes an account from the list
+     * \param username user being removed
+     * \return success of operation
+     */
+    bool RemoveAccount(QString username);
 
 private:
     QSqlDatabase db; //the database

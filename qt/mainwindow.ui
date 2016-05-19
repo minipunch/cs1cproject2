@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -192,8 +192,8 @@
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶V̶&lt;/span&gt;&lt;/p&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶V̶&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;Platnium&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfd-817a-3081-3c0dc168ee0a&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;et Everything mentioned from Gold Package.&lt;/span&gt;&lt;/p&gt;
@@ -233,7 +233,7 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶&lt;br /&gt;Bronze&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;Tier&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf2-4328-8f6a-a78c886d9c97&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;elps protect device from viruses through the firewall reinforcement.&lt;/span&gt;&lt;/p&gt;
@@ -250,8 +250,8 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶I̶&lt;/span&gt;&lt;/p&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶I̶&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;Silver&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adf8-bff1-3734-abef3249e1e7&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;E&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;verything mentioned from Bronze Package.&lt;/span&gt;&lt;/p&gt;
@@ -1761,7 +1761,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>None Selected</string>
+        <string>Nothing Selected</string>
        </property>
       </widget>
       <widget class="QLabel" name="Compview">
@@ -1774,7 +1774,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>None Selected</string>
+        <string>Nothing Selected</string>
        </property>
       </widget>
       <widget class="QLabel" name="Address">
@@ -1787,7 +1787,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="text">
-        <string>None Selected</string>
+        <string>Nothing  Selected</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
@@ -1872,7 +1872,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QPushButton" name="Update">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>10</x>
          <y>260</y>
          <width>75</width>
          <height>23</height>
@@ -1880,6 +1880,19 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="text">
         <string>Update</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>260</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Remove </string>
        </property>
       </widget>
      </widget>
@@ -1907,87 +1920,6 @@ p, li { white-space: pre-wrap; }
       <property name="wordWrap">
        <bool>true</bool>
       </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>870</x>
-        <y>470</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Remove </string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="customerTab">
-     <attribute name="title">
-      <string>Customer</string>
-     </attribute>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>130</y>
-        <width>271</width>
-        <height>261</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_7">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>Current Level : </string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="levelLabel">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="upgradeButton">
-         <property name="text">
-          <string>Upgrade</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>120</y>
-        <width>281</width>
-        <height>241</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_9">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>Liscences Bought</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_11">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </widget>
    </widget>
@@ -2043,7 +1975,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1216</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2137,7 +2069,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>keyCustomersButton</tabstop>
   <tabstop>customersButton</tabstop>
   <tabstop>adminButton</tabstop>
-  <tabstop>upgradeButton</tabstop>
  </tabstops>
  <resources>
   <include location="resource.qrc"/>
