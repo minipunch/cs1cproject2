@@ -89,6 +89,10 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_pWordToggle_2_toggled(bool checked);
+
+    void on_CreatAcct_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;   //list of users

@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     isUserLoggedIn = false;
 
-  //  ui->tabs->removeTab(5);
+    ui->tabs->removeTab(5);
     // remove admin panel tab
     ui->tabs->removeTab(4);
     // remove account info tab
@@ -34,7 +34,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->saveButton->setVisible(false);
     ui->Indicator->setAlignment(Qt::AlignRight);
     ui->Indicator->setText("Guest");
-
+    ui->zipEdit->setValidator(new QIntValidator(10000, 99999, this));
+    ui->zipcodeEdit2->setValidator(new QIntValidator(10000, 99999, this));
+    ui->zipEdit_2->setValidator(new QIntValidator(10000, 99999, this));
+    ui->spinBox->setValue(1);
+    ui->spinBox_2->setValue(1);
 }
 
 MainWindow::~MainWindow()
@@ -101,6 +105,7 @@ void MainWindow::setCustomerLoginTabs(int customerAccessLevel)
         ui->tabs->setCurrentIndex(2);
         // add admin panel tab
         ui->tabs->addTab(ui->adminPanel, "Admin Panel");
+        ui->tabs->addTab(ui->AdminAddmem, "Add Account");
     }
 }
 
@@ -141,6 +146,7 @@ void MainWindow::on_signOutButton_clicked()
     {
         ui->tabs->removeTab(2);
         ui->tabs->removeTab(2);
+        ui->tabs->removeTab(2);
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
         ui->tabs->setCurrentIndex(2);
@@ -152,6 +158,7 @@ void MainWindow::on_signOutButton_clicked()
     {
         ui->tabs->removeTab(2);
         ui->tabs->removeTab(2);
+
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
         ui->tabs->setCurrentIndex(2);
@@ -192,6 +199,7 @@ void MainWindow::on_signOutButton_clicked()
     username = "Guest";
     ui->levelBox->setCurrentIndex(0);
     ui->platformBox->setCurrentIndex(0);
+    ui->spinBox->setValue(1);
 }
 
 
@@ -236,6 +244,77 @@ void MainWindow::on_CreatAcct_clicked()
 
 }
 
+void MainWindow::on_CreatAcct_2_clicked()
+{
+    User toAdd;
+    int access = 1;
+    int quantity;
+    bool key = false;
+    QString name, uName, pWord, keyTemp, company, street, city, state, zipTemp, protection, interest, platform;
+    name = ui->FNameEdit_2->text().simplified();
+    uName = ui->UNameEdit_2->text().simplified();
+    pWord = ui->PwordEdit_2->text().simplified();
+    keyTemp = ui->KeyEdit2->currentText();
+    if(keyTemp == "Yes")
+    {
+        key = true;
+    }
+    company = ui->companyEdit_2->text().simplified();
+    street = ui->streetEdit_2->text().simplified();
+    city = ui->cityEdit_2->text().simplified();
+    state = ui->stateEdit_3->currentText();
+    zipTemp = ui->zipEdit_2->text().simplified();
+    int zip = zipTemp.toInt();
+    protection = ui->levelBox_2->currentText();
+    quantity = ui->spinBox_2->value();
+    interest = ui->InterestEdit_2->currentText();
+    platform = ui->platformBox_2->currentText();
+
+    if(ui->Admintoggle->isChecked())
+    {
+        access = 2;
+    }
+
+    if(name.isEmpty() || uName.isEmpty() || pWord.isEmpty() || company.isEmpty() || street.isEmpty() ||
+            city.isEmpty() || zipTemp.isEmpty())
+    {
+        QMessageBox::information(this, tr("Invalid!"),
+                                 "Please fill all fields.");
+    }
+    else
+    {
+        toAdd.setAll(name, uName, pWord, access,company, street, city, state, zip, protection, quantity, platform, key, interest);
+
+        if(db.addPerson(toAdd))
+        {
+            QMessageBox::information(this, tr("Success!"),
+                                     "Account added!");
+            ui->FNameEdit_2->clear();
+            ui->UNameEdit_2->clear();
+            ui->PwordEdit_2->clear();
+            ui->KeyEdit2->setCurrentIndex(0);
+            ui->companyEdit_2->clear();
+            ui->streetEdit_2->clear();
+            ui->zipEdit_2->clear();
+            ui->levelBox_2->setCurrentIndex(0);
+            ui->spinBox_2->setValue(1);
+            ui->InterestEdit_2->clear();
+            ui->platformBox_2->setCurrentIndex(0);
+            ui->Admintoggle->setChecked(false);
+
+
+        }
+        else
+        {
+            QMessageBox::information(this, tr("Invalid!"),
+                                     "Username is taken, pick another .");
+        }
+
+    }
+
+}
+
+
 void MainWindow::on_pWordToggle_toggled(bool checked)
 {
     if(checked)
@@ -259,7 +338,18 @@ void MainWindow::on_pWordToggle2_toggled(bool checked)
         ui->lineEdit_2->setEchoMode(QLineEdit::Password);
     }
 }
+void MainWindow::on_pWordToggle_2_toggled(bool checked)
+{
+    if(checked)
+    {
+        ui->PwordEdit_2->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        ui->PwordEdit_2->setEchoMode(QLineEdit::Password);
+    }
 
+}
 
 void MainWindow::Login(const QString& username, const QString& pword)
 {

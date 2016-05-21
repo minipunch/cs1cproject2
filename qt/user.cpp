@@ -67,9 +67,27 @@ void User::newCustomer(QString realName, QString uName, QString pWord, QString c
     access = 1;
     licenses = 0;
     isKey = false;
-    protectionLvl = "no protection";
+    protectionLvl = "No protection";
     platform = "n/a";
 
+}
+
+void User::setAll(QString realName, QString uName, QString pWord, int access, QString company, QString street, QString city, QString state, int zip, QString protectionLvl, int licenses, QString platform, bool isKey, QString interest)
+{
+    this->realName = realName;
+    this->uName = uName;
+    this->pWord = pWord;
+    this->access = access;
+    this->company = company;
+    this->street = street;
+    this->city = city;
+    this->state = state;
+    this->zip = zip;
+    this->protectionLvl = protectionLvl;
+    this->licenses = licenses;
+    this->platform = platform;
+    this->isKey = isKey;
+    this->interest = interest;
 }
 
 //setters, generic

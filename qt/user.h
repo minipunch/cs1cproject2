@@ -69,6 +69,10 @@ public:
                      QString company,  QString street, QString city,
                      QString state, int zip, QString interest);
 
+    void setAll(QString realName,QString uName, QString pWord,int access,
+                QString company,  QString street, QString city,
+                QString state, int zip, QString protectionLvl, int licenses,QString platform,bool isKey, QString interest);
+
 
     //setters, generic-----------------------------
     /*!
