@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dbmanager.h"
-
+#include "date.h"
+#include "admin.h"
 #include<QMessageBox>
 /*!
    * \file mainwindow.cpp
@@ -39,6 +40,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->zipEdit_2->setValidator(new QIntValidator(10000, 99999, this));
     ui->spinBox->setValue(1);
     ui->spinBox_2->setValue(1);
+    Date today;
+    ui->Today->setText(QString::fromStdString(today.DisplayDate()));
+
+
 }
 
 MainWindow::~MainWindow()
@@ -547,10 +552,10 @@ void MainWindow::on_tabs_tabBarClicked(int index)
 }
 
 //shortcut login button
-void MainWindow::on_pushButton_3_clicked()
-{
-    this->Login("yuge","wall");
-}
+//void MainWindow::on_pushButton_3_clicked()
+//{
+//    this->Login("yuge","wall");
+//}
 
 void MainWindow::on_signOutButton_2_clicked()
 {

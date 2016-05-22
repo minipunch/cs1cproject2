@@ -68,7 +68,23 @@ public:
     void newCustomer(QString realName,QString uName, QString pWord,
                      QString company,  QString street, QString city,
                      QString state, int zip, QString interest);
-
+    /*!
+     * \brief sets all elements of the class
+     * \param realName User's real name
+     * \param uName    User's desired username
+     * \param pWord    User's desired password
+     * \param access   New user access
+     * \param company  Company that the user represents
+     * \param street   Street and number of the address
+     * \param city     City location of the company
+     * \param state    State where the company is
+     * \param zip      Zip code of company's location
+     * \param protectionLvl New Protection Level
+     * \param licenses  Licenses
+     * \param platform  New platform
+     * \param isKey     New key value
+     * \param interest  New interest
+     */
     void setAll(QString realName,QString uName, QString pWord,int access,
                 QString company,  QString street, QString city,
                 QString state, int zip, QString protectionLvl, int licenses,QString platform,bool isKey, QString interest);
@@ -232,7 +248,7 @@ public:
      *
      * Prints all attributes to the console using qDebug for debugging
      */
-    void PrintDebug() const;
+    void virtual PrintDebug() const;
 
 private:
     int id;

@@ -61,7 +61,7 @@ private slots:
 
     void on_saveButton_clicked();//
 
-    void on_pushButton_3_clicked();//
+    //void on_pushButton_3_clicked();//
 
     void on_keyCustomersButton_clicked();//
 

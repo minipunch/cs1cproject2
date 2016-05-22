@@ -15,11 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     dbmanager.cpp \
-    user.cpp
+    user.cpp \
+    admin.cpp \
+    date.cpp
 
 HEADERS  += mainwindow.h \
     dbmanager.h \
-    user.h
+    user.h \
+    admin.h \
+    date.h
 
 FORMS    += mainwindow.ui
 

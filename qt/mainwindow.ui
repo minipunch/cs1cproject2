@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -151,26 +151,6 @@
        <pixmap resource="resource.qrc">:/images/sneaker.png</pixmap>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>400</y>
-        <width>131</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Xx secret_button xX</string>
-      </property>
-     </widget>
-     <zorder>pushButton_2</zorder>
-     <zorder>label_30</zorder>
-     <zorder>pushButton</zorder>
-     <zorder>label_37</zorder>
-     <zorder>label_38</zorder>
-     <zorder>pushButton_3</zorder>
-     <zorder>picturelabel</zorder>
     </widget>
     <widget class="QWidget" name="productsTab">
      <attribute name="title">
@@ -2683,6 +2663,19 @@ p, li { white-space: pre-wrap; }
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:42pt; font-weight:600;&quot;&gt;Qtπ's Cyber Security&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLabel" name="Today">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Date</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -2769,7 +2762,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>levelBox</tabstop>
   <tabstop>pushButton</tabstop>
   <tabstop>tabs</tabstop>
-  <tabstop>pushButton_3</tabstop>
   <tabstop>pushButton_2</tabstop>
   <tabstop>signOutButton</tabstop>
   <tabstop>EditInfo_B</tabstop>

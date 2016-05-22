@@ -170,7 +170,7 @@ void User::PrintDebug() const
     qDebug() << "Key: " << isKey << endl;
     qDebug() << "Interest" << interest << endl;
 
-}
+    }
 int User::getId() const
 {
     return id;
