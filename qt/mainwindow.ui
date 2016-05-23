@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="welcomeTab">
      <attribute name="title">
@@ -175,8 +175,8 @@
      <widget class="QLabel" name="label_55">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>80</y>
+        <x>10</x>
+        <y>60</y>
         <width>481</width>
         <height>171</height>
        </rect>
@@ -194,8 +194,8 @@
      <widget class="QLabel" name="label_56">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>290</y>
+        <x>890</x>
+        <y>410</y>
         <width>101</width>
         <height>21</height>
        </rect>
@@ -210,8 +210,8 @@
      <widget class="QLabel" name="label_57">
       <property name="geometry">
        <rect>
-        <x>700</x>
-        <y>70</y>
+        <x>720</x>
+        <y>60</y>
         <width>311</width>
         <height>121</height>
        </rect>
@@ -229,10 +229,10 @@
      <widget class="QLabel" name="label_58">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>220</y>
+        <x>470</x>
+        <y>200</y>
         <width>591</width>
-        <height>171</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -248,8 +248,8 @@
      <widget class="QLabel" name="label_59">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>370</y>
+        <x>20</x>
+        <y>280</y>
         <width>301</width>
         <height>71</height>
        </rect>
@@ -259,6 +259,22 @@
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Great internet security this is, maybe if Republic had installed, Republic would not fall to Dark Side. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Yoda&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_60">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>370</y>
+        <width>391</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&quot;5/7 Not that bad of a product, could use some more dank memes and MLG strats. Didn't see enough 720 no scopes and air horns, but what can I say? This is some dank kush. -Your Local 13 year old</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
