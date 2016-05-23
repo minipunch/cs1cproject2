@@ -168,6 +168,9 @@
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <widget class="QTextBrowser" name="textBrowser">
+         <property name="styleSheet">
+          <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(51, 57, 12, 255), stop:0.16 rgba(178, 178, 177, 255), stop:0.232955 rgba(203, 203, 203, 255), stop:0.285 rgba(225, 225, 225, 255), stop:0.352273 rgba(235, 235, 235, 255), stop:0.415 rgba(245, 245, 245, 255), stop:0.52 rgba(209, 209, 209, 255), stop:0.57 rgba(187, 187, 187, 255), stop:0.635 rgba(191, 191, 191, 255), stop:0.695 rgba(216, 216, 216, 255), stop:0.75 rgba(227, 227, 227, 255), stop:0.806818 rgba(225, 225, 225, 255), stop:0.880682 rgba(212, 212, 212, 255), stop:0.935 rgba(187, 187, 187, 255), stop:1 rgba(35, 40, 3, 255));</string>
+         </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -187,8 +190,12 @@ p, li { white-space: pre-wrap; }
        </item>
        <item row="0" column="1">
         <widget class="QTextBrowser" name="textBrowser_2">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
-          <string notr="true">font: 8pt &quot;Comic Sans MS&quot;;</string>
+          <string notr="true">font: 8pt &quot;Comic Sans MS&quot;;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(51, 57, 12, 255), stop:0.16 rgba(136, 106, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:0.935 rgba(137, 108, 26, 255), stop:1 rgba(35, 40, 3, 255));</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -197,8 +204,8 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Comic Sans MS'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶I̶I̶&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; text-decoration: underline;&quot;&gt;Gold&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfa-df96-d334-26e76e1b5dbd&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;et everything mentioned in Bronze Package.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfa-df96-d334-26e76e1b5dbd&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;et everything mentioned in Silver Package.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-0375-3aaa-b89341914d46&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;R&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;eal time protection: we’ll exclusively send one of us to protect you, equipped with a rubber band and a slingshot. &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-53ee-314f-96859418b6a4&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;S&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ecures every device that you own, including microwaves, ovens, and hair-dryers.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfb-64bd-8b9e-f242094ac486&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;llowed to install updates onto program and have access to examples on how those updates help you protect yourself from threats.&lt;/span&gt;&lt;/p&gt;
@@ -209,6 +216,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item row="1" column="1">
         <widget class="QTextBrowser" name="textBrowser_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(51, 57, 12, 255), stop:0.159091 rgba(178, 105, 0, 255), stop:0.232955 rgba(203, 161, 0, 255), stop:0.285 rgba(225, 185, 0, 255), stop:0.352273 rgba(235, 207, 0, 255), stop:0.420455 rgba(245, 229, 0, 255), stop:0.52 rgba(209, 179, 0, 255), stop:0.573864 rgba(187, 144, 0, 255), stop:0.635 rgba(191, 151, 0, 255), stop:0.695 rgba(216, 171, 0, 255), stop:0.75 rgba(227, 199, 0, 255), stop:0.801136 rgba(225, 190, 0, 255), stop:0.880682 rgba(212, 164, 0, 255), stop:0.9375 rgba(187, 138, 0, 255), stop:1 rgba(35, 40, 3, 255));</string>
+         </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -226,6 +236,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item row="1" column="0">
         <widget class="QTextBrowser" name="textBrowser_3">
+         <property name="styleSheet">
+          <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(51, 57, 12, 255), stop:0.16 rgba(136, 136, 136, 255), stop:0.232955 rgba(166, 166, 166, 255), stop:0.285 rgba(204, 204, 204, 255), stop:0.345 rgba(235, 235, 235, 255), stop:0.415 rgba(245, 245, 245, 255), stop:0.52 rgba(209, 209, 209, 255), stop:0.57 rgba(187, 187, 187, 255), stop:0.635 rgba(168, 168, 168, 255), stop:0.695 rgba(202, 202, 202, 255), stop:0.75 rgba(218, 218, 218, 255), stop:0.806818 rgba(208, 208, 208, 255), stop:0.88 rgba(187, 187, 187, 255), stop:0.935 rgba(137, 137, 137, 255), stop:1 rgba(35, 40, 3, 255));</string>
+         </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -266,8 +279,25 @@ p, li { white-space: pre-wrap; }
        </item>
        <item row="0" column="4">
         <widget class="QPushButton" name="BuyButton">
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Buy</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/images/Buy.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>16</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -277,20 +307,36 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Platinum</string>
           </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/PLat.png</normaloff>:/images/PLat.png</iconset>
+          </property>
          </item>
          <item>
           <property name="text">
            <string>Gold</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/Gold.png</normaloff>:/images/Gold.png</iconset>
           </property>
          </item>
          <item>
           <property name="text">
            <string>Silver</string>
           </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/silver.png</normaloff>:/images/silver.png</iconset>
+          </property>
          </item>
          <item>
           <property name="text">
            <string>Bronze</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/Bronze.png</normaloff>:/images/Bronze.png</iconset>
           </property>
          </item>
         </widget>
@@ -317,15 +363,27 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Windows</string>
           </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/Folders OS Windows 8 Metro.png</normaloff>:/images/Folders OS Windows 8 Metro.png</iconset>
+          </property>
          </item>
          <item>
           <property name="text">
            <string>Mac OS X</string>
           </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/Mac_OS_128x128.png</normaloff>:/images/Mac_OS_128x128.png</iconset>
+          </property>
          </item>
          <item>
           <property name="text">
            <string>Linux</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/Tatice-Operating-Systems-Linux.ico</normaloff>:/images/Tatice-Operating-Systems-Linux.ico</iconset>
           </property>
          </item>
         </widget>

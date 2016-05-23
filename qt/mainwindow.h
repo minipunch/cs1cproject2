@@ -93,6 +93,12 @@ private slots:
 
     void on_CreatAcct_2_clicked();
 
+    void on_actionPolicy_triggered();
+
+    void on_actionCredits_2_triggered();
+
+    void on_actionContact_Us_triggered();
+
 private:
     Ui::MainWindow *ui;
     dbManager db;   //list of users

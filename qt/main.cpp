@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+    w.setStyleSheet("background-image:https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiGseym0u7MAhUX6WMKHQ7pCxYQjRwIBw&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26cad%3Drja%26uact%3D8%26ved%3D0ahUKEwiGseym0u7MAhUX6WMKHQ7pCxYQjRwIBw%26url%3Dhttp%253A%252F%252Fwww.towerfoundation.com%252Frsvp%252Fgold-level-sponsorship%26psig%3DAFQjCNHM8_QpNkbd0YYETyWNOM2CPKwF6g%26ust%3D1464039500496654&psig=AFQjCNHM8_QpNkbd0YYETyWNOM2CPKwF6g&ust=1464039500496654");
     w.show();
 
     return a.exec();

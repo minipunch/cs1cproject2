@@ -1,5 +1,14 @@
 <RCC>
     <qresource prefix="/images">
         <file>sneaker.png</file>
+        <file>Folders OS Windows 8 Metro.png</file>
+        <file>Mac_OS_128x128.png</file>
+        <file>Tatice-Operating-Systems-Linux.ico</file>
+        <file>Gold.png</file>
+        <file>PLat.png</file>
+        <file>silver.png</file>
+        <file>Bronze.png</file>
+        <file>Buy.png</file>
+        <file>TRUMPPP.jpeg</file>
     </qresource>
 </RCC>

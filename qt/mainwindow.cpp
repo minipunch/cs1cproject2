@@ -414,7 +414,7 @@ void MainWindow::on_actionHelp_triggered()
 {
     QMessageBox::information(this, tr("Contact Us")
                              , "If you have any complaints or feedback, you may contact us through the number (555)666-7777\nOr you may mail it instead to our P.O. Box at\n"
-                               "555 Suck It Blvd. Home of the Bald Eagles 66666, India");
+                               "555 ThisIsAStreet Blvd. Home of the Bald Eagles 66666, India");
 }
 
 void MainWindow::on_EditInfo_B_clicked()
@@ -841,4 +841,28 @@ void MainWindow::on_pushButton_4_clicked()
                                  "Select a user");
     }
 
+}
+
+void MainWindow::on_actionPolicy_triggered()
+{
+    QMessageBox::information(this, tr("Invalid!"),
+                             "This is our policy:\nWe are perfect.\nYou will "
+                             "always be satisfied by our product, no questions necessary.");
+}
+
+void MainWindow::on_actionCredits_2_triggered()
+{
+    QMessageBox::information(this, tr("Invalid!"),
+                             "KNEEL BEFORE YOUR SAVIORS, YOU PLEBIANS!\n\
+                             Team Qtπs\n\Nick Sidaris\n\Dallas Wendt\n\Ashly Hernandez\n\Josh Yolles\n\Dustin Vuong");
+}
+
+void MainWindow::on_actionContact_Us_triggered()
+{
+    QMessageBox::information(this, tr("Invalid!"),
+                             "In order to purchase our product, you must first create an account to our cult.\n"
+                             "Select the Products tab and assess how much your self-worth is by mentally choosing between the "
+                             "packages.\nOnce you have your choice, on the drop down tab near the bottom right, please select the operating"
+                             "device you'll be using and the package.\nLast buy not least, click on Buy and now you've completed your"
+                             " Rite of Passage into our clan.");
 }
