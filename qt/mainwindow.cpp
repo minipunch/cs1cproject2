@@ -18,11 +18,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     isUserLoggedIn = false;
 
-    ui->tabs->removeTab(5);
+    ui->tabs->removeTab(6);
     // remove admin panel tab
-    ui->tabs->removeTab(4);
+    ui->tabs->removeTab(5);
     // remove account info tab
-    ui->tabs->removeTab(3);
+    ui->tabs->removeTab(4);
 
     //Inserting Picture
     QPixmap burglar(":/images/sneaker.png");
@@ -42,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->spinBox_2->setValue(1);
     Date today;
     ui->Today->setText(QString::fromStdString(today.DisplayDate()));
+   // ui->Testimonial->setText("Let me just tell you, iCyberSecurity is great, absolutely great, it is by far the greatest the internet security company in the world. Oh and the owners, let's talk about the owners because they are so wonderful, the most wonderful people you could ever meet. Nick, Dallas, Josh, Ashly, Dustin, all of them absolutely wonderful, spending time with them is great. You should get this security now, they are making internet security great again, helping me make America great again, greater than ever before and they can make your company great again, so unbelievably great, trust me, I’m Donald Trump");
 
 
 }
@@ -93,21 +94,21 @@ void MainWindow::setCustomerLoginTabs(int customerAccessLevel)
     if(customerAccessLevel == 1)
     {
         // remove customer login tab
-        ui->tabs->removeTab(2);
+        ui->tabs->removeTab(3);
         // add customer info tab
         ui->tabs->addTab(ui->AccountInfoTab, "My Account");
         // set as active tab
-        ui->tabs->setCurrentIndex(2);
+        ui->tabs->setCurrentIndex(3);
         //ui->tabs->addTab(ui->customerTab, "Customer");
     }
     else if(customerAccessLevel == 2)
     {
         // remove customer login tab
-        ui->tabs->removeTab(2);
+        ui->tabs->removeTab(3);
         // add customer info tab
         ui->tabs->addTab(ui->AccountInfoTab, "My Account");
         // set as active tab
-        ui->tabs->setCurrentIndex(2);
+        ui->tabs->setCurrentIndex(3);
         // add admin panel tab
         ui->tabs->addTab(ui->adminPanel, "Admin Panel");
         ui->tabs->addTab(ui->AdminAddmem, "Add Account");
@@ -149,24 +150,24 @@ void MainWindow::on_signOutButton_clicked()
     ui->Indicator->setAlignment(Qt::AlignRight);
     if(currentUserAccessLevel == 2)
     {
-        ui->tabs->removeTab(2);
-        ui->tabs->removeTab(2);
-        ui->tabs->removeTab(2);
+        ui->tabs->removeTab(3);
+        ui->tabs->removeTab(3);
+        ui->tabs->removeTab(3);
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
-        ui->tabs->setCurrentIndex(2);
+        ui->tabs->setCurrentIndex(3);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
         ClearTable();
     }
     if(currentUserAccessLevel == 1)
     {
-        ui->tabs->removeTab(2);
-        ui->tabs->removeTab(2);
+        ui->tabs->removeTab(3);
+        ui->tabs->removeTab(3);
 
         ui->tabs->addTab(ui->myAccount, "My Account");
         // set as myAccount tab as active
-        ui->tabs->setCurrentIndex(2);
+        ui->tabs->setCurrentIndex(3);
         isUserLoggedIn = false;
         currentUserAccessLevel = 0;
     }

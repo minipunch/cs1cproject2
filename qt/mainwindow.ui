@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1216</width>
+    <width>1256</width>
     <height>741</height>
    </rect>
   </property>
@@ -39,8 +39,8 @@
    <widget class="QTabWidget" name="tabs">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>160</y>
+      <x>80</x>
+      <y>150</y>
       <width>1081</width>
       <height>551</height>
      </rect>
@@ -56,7 +56,7 @@
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>400</y>
+        <y>380</y>
         <width>151</width>
         <height>41</height>
        </rect>
@@ -69,9 +69,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>160</y>
+        <y>180</y>
         <width>441</width>
-        <height>231</height>
+        <height>181</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -88,7 +88,7 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>400</y>
+        <y>380</y>
         <width>181</width>
         <height>41</height>
        </rect>
@@ -100,7 +100,7 @@
      <widget class="QLabel" name="label_37">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>310</x>
         <y>0</y>
         <width>441</width>
         <height>81</height>
@@ -116,7 +116,7 @@
      <widget class="QLabel" name="label_38">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>320</x>
         <y>60</y>
         <width>421</width>
         <height>121</height>
@@ -126,7 +126,7 @@
        <string notr="true">font: 14pt &quot;Comic Sans MS&quot;;</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Use Qtπ's cyber security&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Qtπ's cyber security is best cyber security. Much secure. Very wow. Super doge.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Use Qtπ's cyber security&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Qtπ's cyber security is best cyber security. Much secure. Very wow. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -152,6 +152,119 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="testimonials">
+     <attribute name="title">
+      <string>Testimonials</string>
+     </attribute>
+     <widget class="QLabel" name="label_54">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>381</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 36pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;See what others think&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_55">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>481</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 8pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;&amp;quot;Let me just tell you, iCyberSecurity is great, absolutely great, it is by far the greatest the internet security company in the world. Oh and the owners, let's talk about the owners because they are so wonderful, the most wonderful people you could ever meet. Nick, Dallas, Josh, Ashly, Dustin, all of them absolutely wonderful, spending time with them is great. You should get this security now. Yes, I am serious, this is a yuge deal. They are making internet security great again, helping me make America great again, greater than ever before and they can make your company great again, so unbelievably great, trust me, I’m Donald Trump.&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Donald Trump&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_56">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>290</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 8pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>“Hodor!” - Hodor</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_57">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>70</y>
+        <width>311</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 8pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;“I should have installed their software on my private email server, that way no one would be talking about my own damn emails” &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;  - Hillary Clinton&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_58">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>220</y>
+        <width>591</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 8pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;&amp;quot;Dizzle ut my shizz. Own yo' magna own yo', dignissizzle sit amizzle, boofron eget, bizzle nizzle, brizzle. Maecenizzle owned nizzle. Dope malesuada away et fo shizzle. Suspendisse fo. Crizzle mammasay mammasa mamma oo sa tristique turpizzle. Suspendisse fizzle ultricizzle fizzle. Sizzle dolor libero, dizzle interdum, posuere izzle, dapibizzle izzle, fo shizzle. Suspendisse stuff tellizzle. Aenean aliquam mammasay mammasa mamma oo sa sit fo shizzle dolizzle. Fusce sure fo shizzle my nizzle izzle funky fresh. Lorizzle ma nizzle dolizzle funky fresh amizzle, sizzle uhuh ... yih! elit. Suspendisse fo shizzle my nizzle purus, eleifend check out this, shiz izzle, i'm in the shizzle non, elit. Nizzle doggy rutrizzle its fo rizzle&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- A happy customer, CA&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_59">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>370</y>
+        <width>301</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 8pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Great internet security this is, maybe if Republic had installed, Republic would not fall to Dark Side. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Yoda&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="productsTab">
      <attribute name="title">
       <string>Products</string>
@@ -169,22 +282,23 @@
        <item row="0" column="0">
         <widget class="QTextBrowser" name="textBrowser">
          <property name="styleSheet">
-          <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(51, 57, 12, 255), stop:0.16 rgba(178, 178, 177, 255), stop:0.232955 rgba(203, 203, 203, 255), stop:0.285 rgba(225, 225, 225, 255), stop:0.352273 rgba(235, 235, 235, 255), stop:0.415 rgba(245, 245, 245, 255), stop:0.52 rgba(209, 209, 209, 255), stop:0.57 rgba(187, 187, 187, 255), stop:0.635 rgba(191, 191, 191, 255), stop:0.695 rgba(216, 216, 216, 255), stop:0.75 rgba(227, 227, 227, 255), stop:0.806818 rgba(225, 225, 225, 255), stop:0.880682 rgba(212, 212, 212, 255), stop:0.935 rgba(187, 187, 187, 255), stop:1 rgba(35, 40, 3, 255));</string>
+          <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(51, 57, 12, 255), stop:0.16 rgba(178, 178, 177, 255), stop:0.232955 rgba(203, 203, 203, 255), stop:0.285 rgba(225, 225, 225, 255), stop:0.352273 rgba(235, 235, 235, 255), stop:0.415 rgba(245, 245, 245, 255), stop:0.52 rgba(209, 209, 209, 255), stop:0.57 rgba(187, 187, 187, 255), stop:0.635 rgba(191, 191, 191, 255), stop:0.695 rgba(216, 216, 216, 255), stop:0.75 rgba(227, 227, 227, 255), stop:0.806818 rgba(225, 225, 225, 255), stop:0.880682 rgba(212, 212, 212, 255), stop:0.935 rgba(187, 187, 187, 255), stop:1 rgba(35, 40, 3, 255));
+font: 75 8pt &quot;Comic Sans MS&quot;;</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶V̶&lt;/span&gt;&lt;/p&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Comic Sans MS'; font-size:8pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:600; font-style:italic;&quot;&gt;S̶e̶r̶v̶i̶c̶e̶ ̶P̶a̶c̶k̶a̶g̶e̶ ̶I̶V̶&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; text-decoration: underline; color:#000000; background-color:transparent;&quot;&gt;Platnium&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:600; font-style:italic; color:#000000; background-color:transparent;&quot;&gt;TIER&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfd-817a-3081-3c0dc168ee0a&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;et Everything mentioned from Gold Package.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;Gives you some type of life-endangering insurance, except Health(you can get that from Obamacare, you filthy pleb).&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-2acb-1a4c-d4d1bf9f09f2&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;as emergency button to delete your Internet Browsing and File Explorer history INSTANTLY.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-4a33-066a-e94dad4ed988&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;ctually have any installed updates help protect your computer.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-5e95-776d-3487299cdd46&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;llowed to have access to download more RAM (&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:696; color:#000000; background-color:transparent;&quot;&gt;exclusive&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt; freebie!).&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-74aa-e369-98455b8a3696&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; color:#000000; background-color:transparent;&quot;&gt;9.9% Customer Satisfaction (That .1% is for your mom).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfd-817a-3081-3c0dc168ee0a&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;G&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;et Everything mentioned from Gold Package.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;Gives you some type of life-endangering insurance, except Health(you can get that from Obamacare, you filthy pleb).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-2acb-1a4c-d4d1bf9f09f2&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;H&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;as emergency button to delete your Internet Browsing and File Explorer history INSTANTLY.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-4a33-066a-e94dad4ed988&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;ctually have any installed updates help protect your computer.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-5e95-776d-3487299cdd46&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;llowed to have access to download more RAM (&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:696; color:#000000; background-color:transparent;&quot;&gt;exclusive&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt; freebie!).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;docs-internal-guid-a5941b3f-adfe-74aa-e369-98455b8a3696&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:18pt; font-weight:400; color:#000000; background-color:transparent;&quot;&gt;9.9% Customer Satisfaction (That .1% is for your mom).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -2740,7 +2854,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1216</width>
+     <width>1256</width>
      <height>21</height>
     </rect>
    </property>
